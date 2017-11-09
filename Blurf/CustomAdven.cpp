@@ -1,7 +1,7 @@
 #include "CustomAdven.h"
 #include <iostream>
 #include <Windows.h>
-\\Test Comment/Commit
+
 void CustomAdven::begin()
 {
 	m_writing = true;
