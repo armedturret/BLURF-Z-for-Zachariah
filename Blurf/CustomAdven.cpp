@@ -5,13 +5,17 @@
 void CustomAdven::begin()
 {
 	m_writing = true;
+#ifdef _DEBUG
 	std::cout << "-------------------------Adventure Generation Begin-------------------------\n" << std::endl;
+#endif
 }
 
 void CustomAdven::end()
 {
 	m_writing = false;
+#ifdef _DEBUG
 	std::cout << "-------------------------Adeventure Generation Finish-------------------------\n" << std::endl;
+#endif
 }
 
 void CustomAdven::setupChoice(std::string option, std::string destination)
@@ -156,6 +160,11 @@ void CustomAdven::runPaths()
 			break;
 		clearScreen();
 	}
+#ifdef _DEBUG
+	std::cout << "THE END" << std::endl;
+	std::string c;
+	std::getline(std::cin, c);
+#endif
 }
 
 bool CustomAdven::safecheck()
@@ -191,7 +200,7 @@ void CustomAdven::print(std::string text)
 	std::cout << text << std::endl;
 }
 
-void CustomAdven::toCaps(std::string str)
+void CustomAdven::toCaps(std::string& str)
 {
 	for (auto& x : str)
 		x = toupper(x);

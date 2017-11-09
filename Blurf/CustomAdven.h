@@ -60,7 +60,7 @@ private:
 
 	void print(std::string text);
 
-	void toCaps(std::string str);
+	void toCaps(std::string& str);
 
 	std::string getValidInput(path origin);
 

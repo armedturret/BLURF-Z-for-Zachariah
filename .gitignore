@@ -52,3 +52,6 @@
 *.idb
 *.opendb
 *.db
+*.ipch
+*.suo
+*.iobj
