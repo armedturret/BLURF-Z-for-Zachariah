@@ -26,7 +26,7 @@ void robertosCode(CustomAdven& adv) {
 
 int main() {
 	//stuff to appear on start up
-	std::string startUpText = "Filer";
+	std::string startUpText = "Filler";
 
 	CustomAdven adv;
 	adv.begin();
@@ -49,26 +49,26 @@ int main() {
 
 		toCaps(b);
 		if (b == "GO NORTH") {
-			system("cls");
+			adv.clearScreen();
 			//Go north is where loomis came from (apocolyptic setting)
 			aidensCode(adv);
 			break;
 		}
 		else if (b == "GO SOUTH") {
 			//Back to the valley
-			system("cls");
+			adv.clearScreen();
 			andrewsCode(adv);
 			break;
 		}
 		else if (b == "GO WEST") {
 			//Follow the 'birds'
-			system("cls");
+			adv.clearScreen();
 			robertosCode(adv);
 			break;
 		}
 		else if (b == "GO EAST") {
 			//Starvation
-			system("cls");
+			adv.clearScreen();
 			adv.setupChoice("fin", "end");
 			adv.addPath(__LINE__, "start", "You go east for a while but there's nothing there. You eventually run out of supplies and die.");
 			break;

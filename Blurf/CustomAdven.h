@@ -55,6 +55,7 @@ public:
 
 	void runPaths();
 
+	void clearScreen();
 private:
 	bool safecheck();
 
@@ -65,8 +66,6 @@ private:
 	std::string getValidInput(path origin);
 
 	//Console functions
-	void clearScreen();
-
 	void printRedWarning(std::string text);
 
 	bool m_error = false;
