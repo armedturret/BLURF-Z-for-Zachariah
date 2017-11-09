@@ -44,6 +44,7 @@ int main() {
 
 	std::string b;
 	while (true) {
+
 		std::cout << startUpText << std::endl;
 		std::getline(std::cin, b);
 
@@ -69,8 +70,8 @@ int main() {
 		else if (b == "GO EAST") {
 			//Starvation
 			adv.clearScreen();
-			adv.setupChoice("fin", "end");
-			adv.addPath(__LINE__, "start", "You go east for a while but there's nothing there. You eventually run out of supplies and die.");
+			adv.setupChoice("q", "end");
+			adv.addPath(__LINE__, "start", "You go east for a while but there's nothing there. You eventually run out of supplies and die.\nType q to quit.");
 			break;
 		}
 		
