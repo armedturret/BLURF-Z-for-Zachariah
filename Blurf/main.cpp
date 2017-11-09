@@ -3,7 +3,7 @@
 #include <iostream>
 #include <Windows.h>
 #include <map>
-
+//TESTY MCTEST
 #include "CustomAdven.h"
 
 void toCaps(std::string& str)
