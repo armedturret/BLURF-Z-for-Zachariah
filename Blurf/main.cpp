@@ -21,16 +21,19 @@ adv.setupChoice("go south", "centerofvalley");
 adv.setupChoice("go north", "nope");
 adv.addPath(__LINE__, "start", "You step back into the valley, feeling embarrased. Why did you ever think you could leave? To the south is the main road back into the center of the valley. To the north lies the unknown wilderness.");
 
-//adv.setupChoice("talk to him", "talky");
+adv.setupChoice("talk to him", "talky");
 adv.setupChoice("shoot him", "pewpew");
 adv.addPath(__LINE__, "centerofvalley", "There\'s nothing for it. You head back into the valley. When you enter, Mr. Loomis looks puzzled at your arrival.\n\"What are you doing here? Go!\", he yells. You wonder if he can even survive on his own. Maybe it\'s better that you\'ve come back. You decide to talk to him.");
 
-//adv.setupChoice("talk to him", "talky");
+adv.setupChoice("talk to him", "talky");
 adv.setupChoice("shoot him", "pewpew");
-adv.addPath(__LINE__, "nope", "You just can't bring youself to do it. You trudge solemnly back into the valley.");
+adv.addPath(__LINE__, "nope", "You just can't bring youself to do it. You trudge solemnly back into the valley. When you enter, Mr. Loomis looks puzzled at your arrival.\n\"What are you doing here? Go!\", he yells. You wonder if he can even survive on his own. Maybe it\'s better that you\'ve come back. You decide to talk to him.");
 
 adv.setupChoice("", "end");
-adv.addPath(__LINE__, "pewpew", "You grab the gun from you cart and shoot him in the chest. \"You shot me!\", he screams. But they\'re his last words. He dies of his injuries within seconds.");
+adv.addPath(__LINE__, "pewpew", "You grab the gun from your cart and shoot him in the chest. \"You shot me!\", he screams. But they\'re his last words. He dies of his injuries within seconds. You attempt to survive on your own for a long time, but you aren\'t strong or smart enough to make it more than a few years. You die of starvation just 3 years later.");
+
+adv.setupChoice("", "end");
+adv.addPath(__LINE__, "talky", "You approach him. \"I couldn\'t do it.\" He looks at you, disappointed. \"I didn\'t think you would.\" And then it exploded.");
 }
 
 void robertosCode(CustomAdven& adv) {
