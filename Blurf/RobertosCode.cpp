@@ -30,7 +30,7 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("go outside","returnToCart");
 	adv.setupChoice("pick it up", "shackWithOutAxe");
 	adv.setupChoice("pick up the pickaxe", "shackWithOutAxe");
-	adv.addPath(__LINE__, "shackInternalWithAxe", "You enter the shack. Around you are empty shelves cleaned out long ago. However, there is a climbing axe on the floor.");
+	adv.addPath(__LINE__, "shackInternalWithAxe", "You enter the shack. Around you are empty shelves cleaned out long ago. However, there is a set of climbing axes on the floor.");
 	
 	adv.setupChoice("go west", "forest2");
 	adv.setupChoice("keep walking", "forest2");
@@ -39,9 +39,9 @@ void RobertosCode::run(CustomAdven & adv)
 
 	adv.setupChoice("look around", "caveLook");
 	adv.setupChoice("climb out", "climbOut");
-	adv.addPath(__LINE__, "shackWithOutAxe","You pick up the climbing axe and you hear a slight crumbling sound in the shack. You jump thinking that someone is following you. Could John possibly have left the valley? Before you have the chance to turn around, the ground cracks open and you fall in. You are now in a pit that's about 30 ft deep.");
+	adv.addPath(__LINE__, "shackWithOutAxe","You pick up the climbing axes and you hear a slight crumbling sound in the shack. You jump thinking that someone is following you. Could John possibly have left the valley? Before you have the chance to turn around, the ground cracks open and you fall in. You are now in a pit that's about 30 ft deep.");
 
-	adv.setupChoice("use the climbing axe", /*"forestEscaped1"*/"end");
+	adv.setupChoice("use the climbing axes", /*"forestEscaped1"*/"end");
 	adv.setupChoice("look around", "caveLook");
 	adv.addPath(__LINE__, "climbOut", "The walls are too smooth and too steep to climb. Perhaps you can use some kind of tool.");
 
@@ -66,7 +66,9 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("climb down", "fallDeath2");
 	adv.addPath(__LINE__, "contWalkingSafe", "You get on your hands and knees not knowing what's ahead. You start crawling in a slow manner while holding the climbing axes in each hand. This process continues for what feels like forever when you start hearing a stream. Suddenly, one hand feels air and you quikly retract it. There must be a stream below you in some chasm. You feel around and find an opening to youre left as well as your right.");
 
-	adv.addPath(__LINE__,"fallDeath2","You put your feet over the ledge and hang on to it as you drop your body down. You reach out in the darkness to find another handhold when you slip and");
+	adv.setupChoice("q", "end");
+	adv.setupChoice("r", "start");
+	adv.addPath(__LINE__,"fallDeath2","You put your feet over the ledge and hang on to it as you drop your body down. You reach out in the darkness to find another handhold when you slip and realize that this may not have been such a bright");
 
 	adv.setupChoice("search the cars", "end");
 	adv.addPath(__LINE__, "forest2", "After walking west for more time, you see a splotch of gray in the distance. You bring the cart closer with you to see what it is. You a highway with some still intact cars up and down the road.");
