@@ -111,11 +111,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AidensCode.cpp" />
     <ClCompile Include="CustomAdven.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RobertosCode.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AidensCode.h" />
     <ClInclude Include="CustomAdven.h" />
     <ClInclude Include="RobertosCode.h" />
   </ItemGroup>

@@ -37,7 +37,7 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("go west", "forest2");
 	adv.setupChoice("keep walking", "forest2");
 	adv.setupChoice("continue west", "forest2");
-	adv.addPath(__LINE__, "returnToCart", "Leave the shack and return to the cart. You are ready to resume your journey westward.");
+	adv.addPath(__LINE__, "returnToCart", "You leave the shack and return to the cart. You are ready to resume your journey westward.");
 
 	adv.setupChoice("look around", "caveLook");
 	adv.setupChoice("climb out", "climbOut");
@@ -62,11 +62,14 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("r", "start");
 	adv.addPath(__LINE__, "contWalking", "You continue walking in the darkness. After a while, your steps begin to echo around the walls. You even start to hear running water. That's when your next step felt air. The next thing you knew, you were falling throught the darkness when you felt a something hard hit your head and it was all over.\nTIP: Try finding a safer way to walk through darkness\nType r to restart or q to quit");
 
-	adv.setupChoice("filler", "end");
-	adv.addPath(__LINE__, "contWalkingSafe", "filler");
+	adv.setupChoice("go left", "end");
+	adv.setupChoice("go right", "end");
+	adv.setupChoice("climb down using climbing axe", /*"climbDownSafe"*/"end");
+	adv.setupChoice("climb down", "fallDeath2");
+	adv.addPath(__LINE__, "contWalkingSafe", "You get on your hands and knees not knowing what's ahead. You start crawling in a slow manner while holding the climbing axes in each hand. This process continues for what feels like forever when you start hearing a stream. Suddenly, one hand feels air and you quikly retract it. There must be a stream below you in some chasm. You feel around and find an opening to youre left as well as your right.");
 
-	adv.setupChoice("go to highway", "end");
-	adv.setupChoice("get closer", "end");
-	adv.setupChoice("sneak around", "end");
+	adv.addPath(__LINE__,"fallDeath2","You put your feet over the ledge and hang on to it as you drop your body down. You reach out in the darkness to find another handhold when you slip and");
+
+	adv.setupChoice("search the cars", "end");
 	adv.addPath(__LINE__, "forest2", "After walking west for more time, you see a splotch of gray in the distance. You bring the cart closer with you to see what it is. You a highway with some still intact cars up and down the road.");
 }

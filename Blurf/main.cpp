@@ -7,6 +7,8 @@
 //TESTY MCTEST
 #include "CustomAdven.h"
 
+
+#include "AidensCode.h"
 #include "RobertosCode.h"
 
 std::string getFileContents(std::ifstream& File)
@@ -38,7 +40,8 @@ void toCaps(std::string& str)
 }
 
 void aidensCode(CustomAdven& adv) {
-
+	AidensCode code;
+	code.run(adv);
 }
 
 void andrewsCode(CustomAdven& adv) {

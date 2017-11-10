@@ -24,12 +24,18 @@
     <ClCompile Include="RobertosCode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AidensCode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CustomAdven.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RobertosCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AidensCode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
