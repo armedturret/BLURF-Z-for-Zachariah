@@ -21,9 +21,15 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="aidensclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CustomAdven.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="aidensclass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
