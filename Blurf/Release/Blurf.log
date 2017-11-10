@@ -1,7 +1,7 @@
-﻿  CustomAdven.cpp
+﻿  main.cpp
   Generating code
-  5 of 505 functions ( 1.0%) were compiled, the rest were copied from previous compilation.
+  2 of 505 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    12 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  Blurf.vcxproj -> C:\Users\rjwhi\Source\Repos\BLURF-Z-for-Zachariah\Release\Blurf.exe
+  Blurf.vcxproj -> C:\Users\Aiden\source\repos\BLURF-Z-for-Zachariah-mybit\Release\Blurf.exe
