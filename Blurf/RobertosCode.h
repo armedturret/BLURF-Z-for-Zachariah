@@ -2,6 +2,8 @@
 
 #include "CustomAdven.h"
 
+#include <functional>
+
 class RobertosCode
 {
 public:
@@ -9,8 +11,6 @@ public:
 	~RobertosCode();
 
 	void run(CustomAdven& adv);
-
-private:
-	bool m_hasAxe = false;
+	
 };
 
