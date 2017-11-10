@@ -33,5 +33,10 @@ void AidensCode::run(CustomAdven & adv)
 
 	//adv.setupChoice("Action", "Goto?");
 	//adv.setupChoice("Action", "Goto?");
-	adv.addPath(__LINE__, "library1", R"(    )");
+
+	adv.setupChoice("poop", "end");
+	adv.addPath(__LINE__, "library1", R"(	poop)");
+
+	adv.setupChoice("poop", "end");
+	adv.addPath(__LINE__, "store1", R"(	poop)");
 }
