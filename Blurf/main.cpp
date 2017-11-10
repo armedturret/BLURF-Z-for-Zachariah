@@ -3,8 +3,31 @@
 #include <iostream>
 #include <Windows.h>
 #include <map>
+#include <fstream>
 //TESTY MCTEST
 #include "CustomAdven.h"
+
+std::string getFileContents(std::ifstream& File)
+{
+	std::string Lines = "";        //All lines
+
+	if (File)                      //Check if everything is good
+	{
+		while (File.good())
+		{
+			std::string TempLine;                  //Temp line
+			std::getline(File, TempLine);        //Get temp line
+			TempLine += "\n";                      //Add newline character
+
+			Lines += TempLine;                     //Add newline
+		}
+		return Lines;
+	}
+	else                           //Return error
+	{
+		return "ERROR File does not exist.";
+	}
+}
 
 void toCaps(std::string& str)
 {
@@ -21,7 +44,13 @@ void andrewsCode(CustomAdven& adv) {
 }
 
 void robertosCode(CustomAdven& adv) {
+	adv.setupChoice("search", "forest1search");
+	adv.setupChoice("search the forest","forest1search");
+	adv.setupChoice("search the area","forest1search");
+	adv.addPath(__LINE__, "start", "After walking for some time, you find your self in a desolate forest. The leaves on the trees have fallen off long ago.");
 
+
+	adv.addPath(__LINE__, "forest1search", "After walking for some time, you find your self in a desolate forest. The leaves on the trees have fallen off long ago.");
 }
 
 int main() {
@@ -72,6 +101,14 @@ int main() {
 			adv.clearScreen();
 			adv.setupChoice("q", "end");
 			adv.addPath(__LINE__, "start", "You go east for a while but there's nothing there. You eventually run out of supplies and die.\nType q to quit.");
+			break;
+		}
+		else if (b == "CRIPPLETRON") {
+			std::ifstream Reader("Surprise.txt");
+
+			adv.setupChoice("q", "end");
+			adv.addPath(__LINE__, "start", getFileContents(Reader)+"\nType q to quit.");
+			
 			break;
 		}
 		
