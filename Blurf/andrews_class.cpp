@@ -38,38 +38,36 @@ void andrews_class::run(CustomAdven & adv)
 
 	adv.setupChoice("no", "nogo");
 	adv.setupChoice("yes", "yesgo");
-	adv.setupChoice("maybe", "maybego");	
-	adv.addPath(__LINE__, "nomnom", "You eat the pancakes at the table, talking to him about nothing at all, trying to avoid conversation about what happened. Finally John asks you, \"We need to get supplies. Can you get to Ogdentown?\"", gainAxe);
+	adv.setupChoice("maybe", "maybego");
+	adv.addPath(__LINE__, "nomnom", "You eat the pancakes at the table, talking to him about nothing at all, trying to avoid conversation about what happened. Finally John asks you, \"We need to get supplies. Can you get to Ogdentown?\"");
 
 	adv.setupChoice("", "end");
 	adv.addPath(__LINE__, "nogo", "\"You won\'t go? Fine. Then we just starve. I can\'t go. I\'m too lazy.\"\nYou survive for many weeks, begging him to go. But you run out of supplies and die just a few months later.\nPRESS ENTER TO FINISH");
 
-	adv.setupChoice("go to trees", "choptree");
-	adv.addPath(__LINE__, "yesgo", "He hands you an axe, and tells you to go chop some wood.");
-	
 	adv.setupChoice("no", "nogo");
 	adv.setupChoice("yes", "yesgo");
 	adv.setupChoice("maybe", "maybego2");
 	adv.addPath(__LINE__, "maybego", "\"What do you mean, maybe? Do you want to go or not?\"");
 
 	adv.setupChoice("", "end");
-	adv.addPath(__LINE__, "maybego2", R"(                                                   bbbbbbbb                                                        
-YYYYYYY       YYYYYYY  iiii                         b::::::b                                                        
-Y:::::Y       Y:::::Y i::::i                        b::::::b                                                        
-Y:::::Y       Y:::::Y  iiii                         b::::::b                                                        
-Y::::::Y     Y::::::Y                                b:::::b                                                        
-YYY:::::Y   Y:::::YYYiiiiiii    mmmmmmm    mmmmmmm   b:::::bbbbbbbbb       ooooooooooo                              
-   Y:::::Y Y:::::Y   i:::::i  mm:::::::m  m:::::::mm b::::::::::::::bb   oo:::::::::::oo                            
-    Y:::::Y:::::Y     i::::i m::::::::::mm::::::::::mb::::::::::::::::b o:::::::::::::::o                           
-     Y:::::::::Y      i::::i m::::::::::::::::::::::mb:::::bbbbb:::::::bo:::::ooooo:::::o                           
-      Y:::::::Y       i::::i m:::::mmm::::::mmm:::::mb:::::b    b::::::bo::::o     o::::o                           
-       Y:::::Y        i::::i m::::m   m::::m   m::::mb:::::b     b:::::bo::::o     o::::o                           
-       Y:::::Y        i::::i m::::m   m::::m   m::::mb:::::b     b:::::bo::::o     o::::o                           
-       Y:::::Y        i::::i m::::m   m::::m   m::::mb:::::b     b:::::bo::::o     o::::o                           
-       Y:::::Y       i::::::im::::m   m::::m   m::::mb:::::bbbbbb::::::bo:::::ooooo:::::o                           
-    YYYY:::::YYYY    i::::::im::::m   m::::m   m::::mb::::::::::::::::b o:::::::::::::::o                           
-    Y:::::::::::Y    i::::::im::::m   m::::m   m::::mb:::::::::::::::b   oo:::::::::::oo                            
-    YYYYYYYYYYYYY    iiiiiiiimmmmmm   mmmmmm   mmmmmmbbbbbbbbbbbbbbbb      ooooooooooo                              
+	adv.addPath(__LINE__, "maybego2", R"(                                       
+                                                        bbbbbbbb                                                        
+	YYYYYYY       YYYYYYY  iiii                         b::::::b                                                        
+	Y:::::Y       Y:::::Y i::::i                        b::::::b                                                        
+	Y:::::Y       Y:::::Y  iiii                         b::::::b                                                        
+	Y::::::Y     Y::::::Y                                b:::::b                                                        
+	YYY:::::Y   Y:::::YYYiiiiiii    mmmmmmm    mmmmmmm   b:::::bbbbbbbbb       ooooooooooo                              
+	   Y:::::Y Y:::::Y   i:::::i  mm:::::::m  m:::::::mm b::::::::::::::bb   oo:::::::::::oo                            
+		Y:::::Y:::::Y     i::::i m::::::::::mm::::::::::mb::::::::::::::::b o:::::::::::::::o                           
+		 Y:::::::::Y      i::::i m::::::::::::::::::::::mb:::::bbbbb:::::::bo:::::ooooo:::::o                           
+		  Y:::::::Y       i::::i m:::::mmm::::::mmm:::::mb:::::b    b::::::bo::::o     o::::o                           
+		   Y:::::Y        i::::i m::::m   m::::m   m::::mb:::::b     b:::::bo::::o     o::::o                           
+		   Y:::::Y        i::::i m::::m   m::::m   m::::mb:::::b     b:::::bo::::o     o::::o                           
+		   Y:::::Y        i::::i m::::m   m::::m   m::::mb:::::b     b:::::bo::::o     o::::o                           
+		   Y:::::Y       i::::::im::::m   m::::m   m::::mb:::::bbbbbb::::::bo:::::ooooo:::::o                           
+		YYYY:::::YYYY    i::::::im::::m   m::::m   m::::mb::::::::::::::::b o:::::::::::::::o                           
+		Y:::::::::::Y    i::::::im::::m   m::::m   m::::mb:::::::::::::::b   oo:::::::::::oo                            
+		YYYYYYYYYYYYY    iiiiiiiimmmmmm   mmmmmm   mmmmmmbbbbbbbbbbbbbbbb      ooooooooooo                              
                                                                                                                     
                                                                                                                     
                                                                                                                     
@@ -79,31 +77,29 @@ YYY:::::Y   Y:::::YYYiiiiiii    mmmmmmm    mmmmmmm   b:::::bbbbbbbbb       ooooo
                                                                                                                     
                                                                                                                     
                                                                                                                     
-YYYYYYY       YYYYYYY                                  kkkkkkkk             iiii                                    
-Y:::::Y       Y:::::Y                                  k::::::k            i::::i                                   
-Y:::::Y       Y:::::Y                                  k::::::k             iiii                                    
-Y::::::Y     Y::::::Y                                  k::::::k                                                     
-YYY:::::Y   Y:::::YYYeeeeeeeeeeee    nnnn  nnnnnnnn     k:::::k    kkkkkkkiiiiiiinnnn  nnnnnnnn        ssssssssss   
-   Y:::::Y Y:::::Y ee::::::::::::ee  n:::nn::::::::nn   k:::::k   k:::::k i:::::in:::nn::::::::nn    ss::::::::::s  
-    Y:::::Y:::::Y e::::::eeeee:::::een::::::::::::::nn  k:::::k  k:::::k   i::::in::::::::::::::nn ss:::::::::::::s 
-     Y:::::::::Y e::::::e     e:::::enn:::::::::::::::n k:::::k k:::::k    i::::inn:::::::::::::::ns::::::ssss:::::s
-      Y:::::::Y  e:::::::eeeee::::::e  n:::::nnnn:::::n k::::::k:::::k     i::::i  n:::::nnnn:::::n s:::::s  ssssss 
-       Y:::::Y   e:::::::::::::::::e   n::::n    n::::n k:::::::::::k      i::::i  n::::n    n::::n   s::::::s      
-       Y:::::Y   e::::::eeeeeeeeeee    n::::n    n::::n k:::::::::::k      i::::i  n::::n    n::::n      s::::::s   
-       Y:::::Y   e:::::::e             n::::n    n::::n k::::::k:::::k     i::::i  n::::n    n::::nssssss   s:::::s 
-       Y:::::Y   e::::::::e            n::::n    n::::nk::::::k k:::::k   i::::::i n::::n    n::::ns:::::ssss::::::s
-    YYYY:::::YYYY e::::::::eeeeeeee    n::::n    n::::nk::::::k  k:::::k  i::::::i n::::n    n::::ns::::::::::::::s 
-    Y:::::::::::Y  ee:::::::::::::e    n::::n    n::::nk::::::k   k:::::k i::::::i n::::n    n::::n s:::::::::::ss  
-    YYYYYYYYYYYYY    eeeeeeeeeeeeee    nnnnnn    nnnnnnkkkkkkkk    kkkkkkkiiiiiiii nnnnnn    nnnnnn  sssssssssss   )");
+	YYYYYYY       YYYYYYY                                  kkkkkkkk             iiii                                    
+	Y:::::Y       Y:::::Y                                  k::::::k            i::::i                                   
+	Y:::::Y       Y:::::Y                                  k::::::k             iiii                                    
+	Y::::::Y     Y::::::Y                                  k::::::k                                                     
+	YYY:::::Y   Y:::::YYYeeeeeeeeeeee    nnnn  nnnnnnnn     k:::::k    kkkkkkkiiiiiiinnnn  nnnnnnnn        ssssssssss   
+	   Y:::::Y Y:::::Y ee::::::::::::ee  n:::nn::::::::nn   k:::::k   k:::::k i:::::in:::nn::::::::nn    ss::::::::::s  
+		Y:::::Y:::::Y e::::::eeeee:::::een::::::::::::::nn  k:::::k  k:::::k   i::::in::::::::::::::nn ss:::::::::::::s 
+		 Y:::::::::Y e::::::e     e:::::enn:::::::::::::::n k:::::k k:::::k    i::::inn:::::::::::::::ns::::::ssss:::::s
+		  Y:::::::Y  e:::::::eeeee::::::e  n:::::nnnn:::::n k::::::k:::::k     i::::i  n:::::nnnn:::::n s:::::s  ssssss 
+		   Y:::::Y   e:::::::::::::::::e   n::::n    n::::n k:::::::::::k      i::::i  n::::n    n::::n   s::::::s      
+		   Y:::::Y   e::::::eeeeeeeeeee    n::::n    n::::n k:::::::::::k      i::::i  n::::n    n::::n      s::::::s   
+		   Y:::::Y   e:::::::e             n::::n    n::::n k::::::k:::::k     i::::i  n::::n    n::::nssssss   s:::::s 
+		   Y:::::Y   e::::::::e            n::::n    n::::nk::::::k k:::::k   i::::::i n::::n    n::::ns:::::ssss::::::s
+		YYYY:::::YYYY e::::::::eeeeeeee    n::::n    n::::nk::::::k  k:::::k  i::::::i n::::n    n::::ns::::::::::::::s 
+		Y:::::::::::Y  ee:::::::::::::e    n::::n    n::::nk::::::k   k:::::k i::::::i n::::n    n::::n s:::::::::::ss  
+		YYYYYYYYYYYYY    eeeeeeeeeeeeee    nnnnnn    nnnnnnkkkkkkkk    kkkkkkkiiiiiiii nnnnnn    nnnnnn  sssssssssss   )");
 
-	//adv.setupChoice("input", "goto");
-	//adv.addPath(__LINE__, "id", "text");
-	adv.setupChoice("no axe", "end");
-	if (m_hasAxe == true) {
-		adv.setupChoice("chop the trees", "yougotwood");
-	}
-	adv.addPath(__LINE__, "choptree", "lets all chop trees");
+	adv.setupChoice("yes", "goinmorning");
+	adv.setupChoice("no", "nogo");
+	adv.addPath(__LINE__, "yesgo", "\"Then it\'s decided. You\'ll head out tomorrow morning, pick up anything you can, and head back. A simple, routine mission. Ok?\"");
 
+	adv.setupChoice("no", "nogo");
+	adv.addPath(__LINE__, "goinmorning", "");
 }
 
 andrews_class::andrews_class()
