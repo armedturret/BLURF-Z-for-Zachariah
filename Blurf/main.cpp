@@ -47,15 +47,16 @@ void robertosCode(CustomAdven& adv) {
 	adv.setupChoice("search", "forest1search");
 	adv.setupChoice("search the forest","forest1search");
 	adv.setupChoice("search the area","forest1search");
+	adv.setupChoice("search around", "forest1search");
 	adv.addPath(__LINE__, "start", "After walking for some time, you find your self in a desolate forest. The leaves on the trees have fallen off long ago.");
 
-
-	adv.addPath(__LINE__, "forest1search", "After walking for some time, you find your self in a desolate forest. The leaves on the trees have fallen off long ago.");
+	adv.setupChoice("go inside", "end");
+	adv.addPath(__LINE__, "forest1search", "You look about for some time and are able to locate a shack in the area. The roof has partially collapsed but is still standing");
 }
 
 int main() {
 	//stuff to appear on start up
-	std::string startUpText = "Filler";
+	std::string startUpText = "You are playing as Anne Burden from the Robert C. O'Briens\' novel Z for Zacharia. You have just left the valley and are a safe distance away from the insane John Loomis. Now, you must choose which direction to go in. He is yelling that to the west he saw birds.";
 
 	CustomAdven adv;
 	adv.begin();
