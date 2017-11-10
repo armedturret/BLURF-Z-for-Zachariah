@@ -55,3 +55,4 @@
 *.ipch
 *.suo
 *.iobj
+*.log
