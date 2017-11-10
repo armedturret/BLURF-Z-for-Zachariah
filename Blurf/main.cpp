@@ -29,7 +29,7 @@ adv.addPath(__LINE__, "centerofvalley", "There\'s nothing for it. You head back 
 adv.setupChoice("shoot him", "pewpew");
 adv.addPath(__LINE__, "nope", "You just can't bring youself to do it. You trudge solemnly back into the valley.");
 
-
+adv.setupChoice("", "end");
 adv.addPath(__LINE__, "pewpew", "You grab the gun from you cart and shoot him in the chest. \"You shot me!\", he screams. But they\'re his last words. He dies of his injuries within seconds.");
 }
 
