@@ -73,7 +73,7 @@ int main() {
 
 	std::string b;
 	while (true) {
-
+		adv.clearScreen();
 		std::cout << startUpText << std::endl;
 		std::getline(std::cin, b);
 

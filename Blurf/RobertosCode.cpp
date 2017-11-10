@@ -28,9 +28,11 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.addPath(__LINE__, "forest1search", "You look about for some time leaving the cart behind and are able to locate a shack in the area. The roof has partially collapsed but is still standing.");
 
 	
+	adv.setupChoice("leave the shack", "returnToCart");
 	adv.setupChoice("go outside","returnToCart");
+	adv.setupChoice("pick up the climbing axes", "shackWithOutAxe");
 	adv.setupChoice("pick them up", "shackWithOutAxe");
-	adv.setupChoice("pick up the pickaxe", "shackWithOutAxe");
+	adv.setupChoice("pick the climbing axes up", "shackWithOutAxe");
 	adv.addPath(__LINE__, "shackInternalWithAxe", "You enter the shack. Around you are empty shelves cleaned out long ago. However, there is a set of climbing axes on the floor.");
 	
 	adv.setupChoice("go west", "forest2");
@@ -49,6 +51,8 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("climb out", "climbOut");
 	adv.setupChoice("go into dark opening", "cave1");
 	adv.setupChoice("go into darkness", "cave1");
+	adv.setupChoice("enter the dark opening", "cave1");
+	adv.setupChoice("enter the darkness", "cave1");
 	adv.setupChoice("enter dark opening", "cave1");
 	adv.setupChoice("enter darkness", "cave1");
 	adv.addPath(__LINE__, "caveLook", "You look around the pit. The only light is from the hole above. Ahead of you is a dark opening. The light above you is slowly diminishing as it's getting late.");
@@ -57,12 +61,13 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("get on all fours", "contWalkingSafe");
 	adv.setupChoice("crawl on all fours", "contWalkingSafe");
 	adv.setupChoice("get on hands and knees", "contWalkingSafe");
+	adv.setupChoice("keep walking", "contWalking");
 	adv.setupChoice("continue walking", "contWalking");
 	adv.addPath(__LINE__, "cave1", "You enter the darkness. You begin walking but very quickly all light dissapears.");
 
 	adv.setupChoice("q", "end");
 	adv.setupChoice("r", "start");
-	adv.addPath(__LINE__, "contWalking", "You continue walking in the darkness. After a while, your steps begin to echo around the walls. You even start to hear running water. That's when your next step felt air. The next thing you knew, you were falling throught the darkness when you felt a something hard hit your head and it was all over.\nTIP: Try finding a safer way to walk through darkness\nType r to restart or q to quit");
+	adv.addPath(__LINE__, "contWalking", "You continue walking in the darkness. After a while, your steps begin to echo around the walls. You even start to hear running water. That's when your next step feels air. The next thing you know, you are falling through the darkness when you feel something hard hit your head and it is all over.\nTIP: Try finding a safer way to walk through darkness\nType r to restart or q to quit");
 
 	adv.setupChoice("go left", "end");
 	adv.setupChoice("go right", "end");
