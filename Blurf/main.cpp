@@ -104,6 +104,7 @@ int main() {
 			break;
 		}
 		else if (b == "CRIPPLETRON") {
+			adv.clearScreen();
 			std::ifstream Reader("Surprise.txt");
 
 			adv.setupChoice("q", "end");
