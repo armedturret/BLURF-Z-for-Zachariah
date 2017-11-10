@@ -1,7 +1,5 @@
 #include "RobertosCode.h"
 
-#include <functional>
-
 RobertosCode::RobertosCode()
 {
 }

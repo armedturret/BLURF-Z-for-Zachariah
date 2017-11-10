@@ -55,7 +55,7 @@ void robertosCode(CustomAdven& adv) {
 
 int main() {
 	//stuff to appear on start up
-	std::string startUpText = "You are playing as Anne Burden from the Robert C. O'Briens\' novel Z for Zacharia. You have just left the valley and are a safe distance away from the insane John Loomis. Now, you must choose which direction to go in. He is yelling that to the west he saw birds.";
+	std::string startUpText = "You are playing as Anne Burden from the Robert C. O'Briens\' novel Z for Zacharia. You have just left the valley and are a safe distance away from the insane John Loomis. Now, you must choose which direction to go in. He is yelling that to the west he saw birds. Now you simply need to choose a direction to go in.";
 
 	CustomAdven adv;
 	adv.begin();
