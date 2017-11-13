@@ -63,7 +63,7 @@ private:
 
 	void toCaps(std::string& str);
 
-	std::string getValidInput(path origin);
+	std::string getValidInput(std::string id, path origin);
 
 	//Console functions
 	void printRedWarning(std::string text);

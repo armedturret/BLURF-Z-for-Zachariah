@@ -40,14 +40,6 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("continue west", "forest2");
 	adv.addPath(__LINE__, "returnToCart", "You leave the shack and return to the cart. You are ready to resume your journey westward.");
 
-	adv.setupChoice("look around", "caveLook");
-	adv.setupChoice("climb out", "climbOut");
-	adv.addPath(__LINE__, "shackWithOutAxe","You pick up the climbing axes and you hear a slight crumbling sound in the shack. You jump thinking that someone is following you. Could John possibly have left the valley? Before you have the chance to turn around, the ground cracks open and you fall in. You are now in a pit that's about 30 ft deep.");
-
-	adv.setupChoice("use the climbing axes", /*"forestEscaped1"*/"end");
-	adv.setupChoice("look around", "caveLook");
-	adv.addPath(__LINE__, "climbOut", "The walls are too smooth and too steep to climb. Perhaps you can use some kind of tool.");
-
 	adv.setupChoice("climb out", "climbOut");
 	adv.setupChoice("go into dark opening", "cave1");
 	adv.setupChoice("go into darkness", "cave1");
@@ -55,8 +47,21 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("enter the darkness", "cave1");
 	adv.setupChoice("enter dark opening", "cave1");
 	adv.setupChoice("enter darkness", "cave1");
-	adv.addPath(__LINE__, "caveLook", "You look around the pit. The only light is from the hole above. Ahead of you is a dark opening. The light above you is slowly diminishing as it's getting late.");
+	adv.addPath(__LINE__, "shackWithOutAxe","You pick up the climbing axes and you hear a slight crumbling sound in the shack. You jump thinking that someone is following you. Could John possibly have left the valley? Before you have the chance to turn around, the ground cracks open and you fall in. You are now in a pit that's about 30 ft deep. You look around the pit. The only light is from the hole above. Ahead of you is a dark opening. The light above you is slowly diminishing as it's getting late.");
 
+	adv.setupChoice("use the climbing axes", /*"forestEscaped1"*/"end");
+	adv.setupChoice("cancel", "caveLook");
+	adv.addPath(__LINE__, "climbOut", "The walls are too smooth and too steep to climb. Perhaps you can use some kind of tool.");
+
+	adv.setupChoice("go into dark opening", "cave1");
+	adv.setupChoice("go into darkness", "cave1");
+	adv.setupChoice("enter the dark opening", "cave1");
+	adv.setupChoice("enter the darkness", "cave1");
+	adv.setupChoice("enter dark opening", "cave1");
+	adv.setupChoice("enter darkness", "cave1");
+	adv.setupChoice("climb out", "climbOut");
+	adv.addPath(__LINE__, "caveLook", "You look around the pit. The only light is from the hole above. Ahead of you is a dark opening. The light above you is slowly diminishing as it's getting late.");
+	
 	adv.setupChoice("crawl on hands and knees", "contWalkingSafe");
 	adv.setupChoice("get on all fours", "contWalkingSafe");
 	adv.setupChoice("crawl on all fours", "contWalkingSafe");

@@ -153,8 +153,11 @@ void CustomAdven::runPaths()
 	path currentPath;
 	while (true) {
 		currentPath = m_choiceMap.find(nextPathID)->second;
+#ifdef _DEBUG
+		std::cout << nextPathID << ": ";
+#endif
 		print(currentPath.text);
-		input = getValidInput(currentPath);
+		input = getValidInput(nextPathID, currentPath);
 		nextPathID = currentPath.customBehavior(input, currentPath);
 		if (nextPathID == "end")
 			break;
@@ -206,16 +209,19 @@ void CustomAdven::toCaps(std::string& str)
 		x = toupper(x);
 }
 
-std::string CustomAdven::getValidInput(path origin)
+std::string CustomAdven::getValidInput(std::string id, path origin)
 {
 	while (true) {
-		
+
 		std::string choice;
 		std::getline(std::cin, choice);
 		toCaps(choice);
 		if (origin.choices.find(choice) != origin.choices.end())
 			return choice;
 		clearScreen();
+#ifdef _DEBUG
+		std::cout << id<<": ";
+#endif
 		print(origin.text);
 	}
 }
