@@ -102,10 +102,33 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("climb down", "fallDeath2");
 	adv.addPath(__LINE__, "contWalkingSafe", "You get on your hands and knees not knowing what's ahead. You start crawling in a slow manner while holding the climbing axes in each hand. This process continues for what feels like forever when you start hearing a stream. Suddenly, one hand feels air and you quikly retract it. There must be a stream below you in some chasm. You feel around and find an opening to youre left as well as your right.");
 
+	adv.setupChoice("break the wall with climbing axe", "breakWall");
+	adv.setupChoice("break the wall with a climbing axe", "breakWall");
+	adv.setupChoice("break the wall with the climbing axes", "breakWall");
+	adv.setupChoice("break the wall with climbing axes", "breakWall");
+	adv.setupChoice("break the wall", "attemptBreak""end");
+	adv.addPath(__LINE__, "falseHope","You decide to go right along the ledge. You crawl on your hands and knees until you find a tunnel entrance and the rushing water sound starts fading behind you. You reach a turn when you beleive you see something shining up ahead. You shake with joy as you see the light ahead. You get up and starting running down the tunnel as your vision becomes clearer. Your eyes didn't deceive you as there is a rock wall with cracks of light coming through.");
 
-	adv.setupChoice("break the wall with climbing axe", /*"breakWall"*/"end");
-	adv.setupChoice("break the wall", /*"attemptBreak"*/"end");
-	adv.addPath(__LINE__, "falseHope","You decide to go right aloung the ledge. You crawl on your hands and knees until you find a tunnel entrance and the rushing water sound starts fading behind you. You reach a turn when you beleive you see something shining up ahead. You shake with joy as you see the light ahead. You get up and starting running down the tunnel as your vision becomes clearer. Your eyes didn't deceive you as there is a rock wall with cracks of light coming through.");
+	adv.setupChoice("cancel", "cancelBreak");
+	adv.setupChoice("use climbing axe", "breakWall");
+	adv.addPath(__LINE__, "attemptBreak", "You attempt to kick the wall to break through but is too solid to break through with your foot.");
+
+	adv.setupChoice("break the wall with climbing axe", "breakWall");
+	adv.setupChoice("break the wall with a climbing axe", "breakWall");
+	adv.setupChoice("break the wall with the climbing axes", "breakWall");
+	adv.setupChoice("break the wall with climbing axes", "breakWall");
+	adv.setupChoice("break the wall", "attemptBreak""end");
+	adv.addPath(__LINE__, "cancelBreak", "You are standing in front of wall with cracks of light seeping through it.");
+	
+	adv.setupChoice("exit cave", "backToTheStart");
+	adv.setupChoice("exit hole", "backToTheStart");
+	adv.setupChoice("exit through hole", "backToTheStart");
+	adv.setupChoice("enter hole", "backToTheStart");
+	adv.setupChoice("go through hole", "backToTheStart");
+	adv.addPath(__LINE__, "breakWall", "You smash the climbing axe through the wall and make a hole the size of a baseball. You continue the process until there is a large enough hole to crawl through with the suit.");
+
+	adv.setupChoice("filler", "end");
+	adv.addPath(__LINE__, "backToTheStart", "Filler Text");
 
 	adv.setupChoice("q", "end");
 	adv.setupChoice("r", "start");
