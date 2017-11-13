@@ -118,7 +118,7 @@ int main() {
 
 //only call in debug
 #ifdef _DEBUG
-	adv.generateCheatSheet("cheatSheet.txt");
+	adv.generateCheatSheet("Cheat Sheet.txt");
 #endif	
 	adv.runPaths();
 	
