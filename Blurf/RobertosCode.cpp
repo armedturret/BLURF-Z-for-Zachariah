@@ -106,7 +106,7 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("break the wall with a climbing axe", "breakWall");
 	adv.setupChoice("break the wall with the climbing axes", "breakWall");
 	adv.setupChoice("break the wall with climbing axes", "breakWall");
-	adv.setupChoice("break the wall", "attemptBreak""end");
+	adv.setupChoice("break the wall", "attemptBreak");
 	adv.addPath(__LINE__, "falseHope","You decide to go right along the ledge. You crawl on your hands and knees until you find a tunnel entrance and the rushing water sound starts fading behind you. You reach a turn when you beleive you see something shining up ahead. You shake with joy as you see the light ahead. You get up and starting running down the tunnel as your vision becomes clearer. Your eyes didn't deceive you as there is a rock wall with cracks of light coming through.");
 
 	adv.setupChoice("cancel", "cancelBreak");
@@ -117,18 +117,21 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("break the wall with a climbing axe", "breakWall");
 	adv.setupChoice("break the wall with the climbing axes", "breakWall");
 	adv.setupChoice("break the wall with climbing axes", "breakWall");
-	adv.setupChoice("break the wall", "attemptBreak""end");
+	adv.setupChoice("break the wall", "attemptBreak");
 	adv.addPath(__LINE__, "cancelBreak", "You are standing in front of wall with cracks of light seeping through it.");
 	
 	adv.setupChoice("exit cave", "backToTheStart");
 	adv.setupChoice("exit hole", "backToTheStart");
+	adv.setupChoice("climb through", "backToTheStart");
+	adv.setupChoice("climb through hole", "backToTheStart");
 	adv.setupChoice("exit through hole", "backToTheStart");
 	adv.setupChoice("enter hole", "backToTheStart");
 	adv.setupChoice("go through hole", "backToTheStart");
 	adv.addPath(__LINE__, "breakWall", "You smash the climbing axe through the wall and make a hole the size of a baseball. You continue the process until there is a large enough hole to crawl through with the suit.");
 
-	adv.setupChoice("filler", "end");
-	adv.addPath(__LINE__, "backToTheStart", "Filler Text");
+	adv.setupChoice("q", "end");
+	adv.setupChoice("r", "start");
+	adv.addPath(__LINE__, "backToTheStart", "You climb through the hole but luckily don't have to squint at the sun thanks to the filters on the suit. You look around you and see that you are at the entrance of a small cave. You take a couple steps out of it and stroll down a slope. You see behind some trees a house and upon your investigation realize where you are with horror. You have somehow treked your way back to your home valley. You turn to run away when you feel a sharp pain in your right knee and fall down. You try to get yp but you can't as there is a bullet in your knee. John comes out the front door of the house and smiles as he picks you up and takes you inside.\nTIP: Search for another path through the caves.\nType r to restart or q to quit");
 
 	adv.setupChoice("q", "end");
 	adv.setupChoice("r", "start");

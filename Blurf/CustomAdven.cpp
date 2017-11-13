@@ -1,7 +1,7 @@
 #include "CustomAdven.h"
 #include <iostream>
 #include <Windows.h>
-
+#include <fstream>
 void CustomAdven::begin()
 {
 	m_writing = true;
@@ -82,6 +82,35 @@ void CustomAdven::addPath(const int lineNum, std::string name, std::string text,
 	m_choiceMap.insert(make_pair(name, pathBuf));
 
 	m_choiceBuf.clear();
+}
+
+void CustomAdven::generateCheatSheet(std::string file)
+{
+#ifndef  _DEBUG
+	printRedWarning("Error:");
+	std::cout << " generateCheatSheet() cannot be called in Release mode." << std::endl;
+#else
+	if (m_writing) {
+		printRedWarning("Error: ");
+		std::cout << "Must run end() before running generateCheatSheet()" << std::endl;
+		std::string a;
+		std::getline(std::cin, a);
+		return;
+	}
+	std::fstream cheatSheet(file,std::ios::out);
+
+	std::string headerText = "The following is a BLURF Text Adventure Engine Auto-Generated Cheat-Sheet.\n\n------------------------------------------------------------------------INSTRUCTIONS-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n\nThe cheat sheet has the following format:\n\n<pathID>:\n\tText: <text>\n\t\t<choiceText> -> <destinationPathID>\n\t\t<choiceText> -> <destinationPathID>\n\nWhat it means :\n\n\tpathID: Something the text engine uses to discriminate a path from others.Use ctrl + f to find a specific pathID.\n\n\ttext : The text that tells the story for that specific path.\n\n\tchoiceText : What the user has to type.\n\n\tdestinationPathID : What pathID the engine attempts to find.\n\n\nHow to trace the story : All you have to do to trace a story is to first find a path with a pathID of \"start\" then look at the text and then the choices and what paths they lead to.Then find that pathID in the document and repeat until desired outcome.The reverse can also be done to start from the end to find a path to the begining.\n\n------------------------------------------------------------------------STORY MAP-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n\n";
+
+	cheatSheet << headerText;
+
+	for (auto it = m_choiceMap.begin(); it != m_choiceMap.end(); it++) {
+		cheatSheet << it->first<<":\n";
+		cheatSheet << "\tText: "<<it->second.text<<"\n";
+		for (auto bit = it->second.choices.begin(); bit != it->second.choices.end(); bit++)
+			cheatSheet << "\t\t" << bit->first<<" -> "<<bit->second<<"\n";
+		cheatSheet << "\n";
+	}
+#endif
 }
 
 void CustomAdven::writeAsBinary(std::string file)

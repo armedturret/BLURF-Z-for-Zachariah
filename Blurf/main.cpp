@@ -116,8 +116,10 @@ int main() {
 	}
 	adv.end();
 
-	//don't need this
-	//adv.writeAsBinary("yee");
+//only call in debug
+#ifdef _DEBUG
+	adv.generateCheatSheet("cheatSheet.txt");
+#endif	
 	adv.runPaths();
 	
 	return 0;

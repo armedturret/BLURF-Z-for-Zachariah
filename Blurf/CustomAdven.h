@@ -51,6 +51,8 @@ public:
 
 	void addPath(const int lineNum, std::string name, std::string text, std::function<std::string(std::string input, path currentPath)> customBehavior = defaultBehavior);
 
+	void generateCheatSheet(std::string file);
+
 	void writeAsBinary(std::string file);
 
 	void runPaths();
