@@ -107,7 +107,10 @@ void CustomAdven::generateCheatSheet(std::string file)
 		cheatSheet << it->first<<":\n";
 		cheatSheet << "\tText: "<<it->second.text<<"\n";
 		for (auto bit = it->second.choices.begin(); bit != it->second.choices.end(); bit++)
-			cheatSheet << "\t\t" << bit->first<<" -> "<<bit->second<<"\n";
+			if(bit->first != "")
+				cheatSheet << "\t\t" << bit->first<<" -> "<<bit->second<<"\n";
+			else
+				cheatSheet << "\t\t" << "{EMPTY}" << " -> " << bit->second << "\n";
 		cheatSheet << "\n";
 	}
 #endif
