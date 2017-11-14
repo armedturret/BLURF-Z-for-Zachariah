@@ -73,7 +73,13 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("continue west", "forest2");
 	adv.addPath(__LINE__, "returnToCart", "You leave the shack and return to the cart. You are ready to resume your journey westward.");
 
-	adv.setupChoice("climb out", "climbOut");
+	adv.setupChoice("climb up walls", "climbOut");
+	adv.setupChoice("climb up wall", "climbOut");
+	adv.setupChoice("climb up the walls", "climbOut");
+	adv.setupChoice("climb up the wall", "climbOut");
+	adv.setupChoice("climb up from the pit", "climbOut");
+	adv.setupChoice("climb out of pit", "climbOut");
+	adv.setupChoice("climb out of the pit", "climbOut");
 	adv.setupChoice("go into dark opening", "cave1");
 	adv.setupChoice("go into darkness", "cave1");
 	adv.setupChoice("enter the dark opening", "cave1");
