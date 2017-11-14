@@ -7,7 +7,7 @@
 //TESTY MCTEST
 #include "CustomAdven.h"
 
-
+#include "andrews_class.h"
 #include "AidensCode.h"
 #include "RobertosCode.h"
 
@@ -45,7 +45,8 @@ void aidensCode(CustomAdven& adv) {
 }
 
 void andrewsCode(CustomAdven& adv) {
-
+	andrews_class code;
+	code.run(adv);
 }
 
 void robertosCode(CustomAdven& adv) {
