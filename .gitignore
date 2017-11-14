@@ -81,9 +81,8 @@
 
 
 # Executables
-*.exe
-
-!VC_redist.x86.exe #Keep this for redist purposes
+*.exe 
+!VC_redist.x86.exe
 *.out
 
 
