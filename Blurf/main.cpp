@@ -42,16 +42,34 @@ void toCaps(std::string& str)
 void aidensCode(CustomAdven& adv) {
 	AidensCode code;
 	code.run(adv);
+	adv.end();
+
+//only call in debug
+#ifdef _DEBUG
+	adv.generateCheatSheet("North Cheat Sheet.txt");
+#endif	
 }
 
 void andrewsCode(CustomAdven& adv) {
 	andrews_class code;
 	code.run(adv);
+	adv.end();
+
+//only call in debug
+#ifdef _DEBUG
+	adv.generateCheatSheet("South Cheat Sheet.txt");
+#endif	
 }
 
 void robertosCode(CustomAdven& adv) {
 	RobertosCode code;
 	code.run(adv);
+	adv.end();
+
+//only call in debug
+#ifdef _DEBUG
+	adv.generateCheatSheet("West Cheat Sheet.txt");
+#endif
 }
 
 int main() {
@@ -102,6 +120,7 @@ int main() {
 			adv.clearScreen();
 			adv.setupChoice("q", "end");
 			adv.addPath(__LINE__, "start", "You go east for a while but there's nothing there. You eventually run out of supplies and die.\nType q to quit.");
+			adv.end();
 			break;
 		}
 		else if (b == "CRIPPLETRON") {
@@ -110,17 +129,13 @@ int main() {
 
 			adv.setupChoice("q", "end");
 			adv.addPath(__LINE__, "start", getFileContents(Reader)+"\nType q to quit.");
-			
+			adv.end();
 			break;
 		}
 		
 	}
-	adv.end();
+	
 
-//only call in debug
-#ifdef _DEBUG
-	adv.generateCheatSheet("Cheat Sheet.txt");
-#endif	
 	adv.runPaths();
 	
 	return 0;
