@@ -20,9 +20,26 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("search the area", "forest1search");
 	adv.setupChoice("search around", "forest1search");
 	adv.setupChoice("look around", "forest1search");
+	adv.setupChoice("search bricks", "brickLook1");
+	adv.setupChoice("search the bricks", "brickLook1");
+	adv.setupChoice("look at the bricks", "brickLook1");
+	adv.setupChoice("look at bricks", "brickLook1");
+	adv.setupChoice("examine the bricks", "brickLook1");
 	adv.setupChoice("eat a brick to gain its powers", "brickWizard");
 	adv.addPath(__LINE__, "start", "After walking for some time trailing the wagon behind you, you find your self in a desolate forest. The leaves on the trees have fallen off long ago. You see bricks on the ground. Perhaps you could find supplies somewhere around here.");
 	
+	adv.setupChoice("eat a brick to gain its powers", "brickWizard");
+	adv.setupChoice("go west", "forest2");
+	adv.setupChoice("keep walking", "forest2");
+	adv.setupChoice("continue west", "forest2");
+	adv.setupChoice("keep going", "forest2");
+	adv.setupChoice("search the forest", "forest1search");
+	adv.setupChoice("search around here", "forest1search");
+	adv.setupChoice("search the area", "forest1search");
+	adv.setupChoice("search around", "forest1search");
+	adv.setupChoice("look around", "forest1search");
+	adv.addPath(__LINE__,"brickLook1","You look a the bricks and realize, they are just bricks. Perhaps you should LOOK AROUND or KEEP GOING.");
+
 	adv.setupChoice("r", "start");
 	adv.setupChoice("q", "end");
 	adv.addPath(__LINE__, "brickWizard", "You start screeching \"Yimbo Yenkins\" and have become Ian. You now have brick powers. You summon bricks now and decide to build a brick fortress. You build the empire of brickmania where you rule with a brick fist. You also eat brickfast here and brinch. You send bricks to conquer every corner of the dead world and are now the ruler of all. Your national motto is \"Shut up and take my money\".\nType r to restart or q to quit");
@@ -31,6 +48,8 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("keep walking", "forest2");
 	adv.setupChoice("continue west", "forest2");
 	adv.setupChoice("go in", "shackInternalWithAxe");
+	adv.setupChoice("go in shack", "shackInternalWithAxe");
+	adv.setupChoice("enter shack", "shackInternalWithAxe");
 	adv.setupChoice("go in the shack", "shackInternalWithAxe");
 	adv.setupChoice("enter the shack", "shackInternalWithAxe");
 	adv.setupChoice("go inside", "shackInternalWithAxe");
@@ -39,6 +58,9 @@ void RobertosCode::run(CustomAdven & adv)
 	
 	adv.setupChoice("leave the shack", "returnToCart");
 	adv.setupChoice("go outside","returnToCart");
+	adv.setupChoice("take climbing axes", "shackWithOutAxe");
+	adv.setupChoice("pick up climbing axes", "shackWithOutAxe");
+	adv.setupChoice("pick climbing axes up", "shackWithOutAxe");
 	adv.setupChoice("take the climbing axes", "shackWithOutAxe");
 	adv.setupChoice("take them", "shackWithOutAxe");
 	adv.setupChoice("pick up the climbing axes", "shackWithOutAxe");
@@ -138,5 +160,5 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.addPath(__LINE__,"fallDeath2","You put your feet over the ledge and hang on to it as you drop your body down. You reach out in the darkness to find another handhold when you slip and realize that this may not have been such a bright idea. You loose your grip and fall into the blackness below.\nTIP: Is there some equipment you can use to safely go down?");
 
 	adv.setupChoice("search the cars", "end");
-	adv.addPath(__LINE__, "forest2", "After walking west for more time, you see a splotch of gray in the distance. You bring the cart closer with you to see what it is. You a highway with some still intact cars up and down the road.");
+	adv.addPath(__LINE__, "forest2", "After walking west for more time, you see a splotch of gray in the distance. You bring the cart closer with you to see what it is. You a highway with some burned out cars up and down the road.");
 }
