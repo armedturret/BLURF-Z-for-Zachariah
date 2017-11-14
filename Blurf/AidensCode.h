@@ -10,4 +10,3 @@ public:
 
 	void run(CustomAdven& adv);
 };
-
