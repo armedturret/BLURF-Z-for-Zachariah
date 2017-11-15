@@ -123,12 +123,30 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("r", "start");
 	adv.addPath(__LINE__, "contWalking", "You continue walking in the darkness. After a while, your steps begin to echo around the walls. You even start to hear running water. That's when your next step feels air. The next thing you know, you are falling through the darkness when you feel something hard hit your head and it is all over.\nTIP: Try finding a safer way to walk through darkness\nType r to restart or q to quit");
 
-	adv.setupChoice("go left", "end");
+	adv.setupChoice("go left", "leftGoWalkyDo");
 	adv.setupChoice("go right", "falseHope");
-	adv.setupChoice("use climbing axe", /*"climbDownSafe"*/"end");
-	adv.setupChoice("climb down using climbing axe", /*"climbDownSafe"*/"end");
+	adv.setupChoice("use climbing axe", "climbDownSafe");
+	adv.setupChoice("climb down using climbing axe", "climbDownSafe");
 	adv.setupChoice("climb down", "fallDeath2");
-	adv.addPath(__LINE__, "contWalkingSafe", "You get on your hands and knees not knowing what's ahead. You start crawling in a slow manner while holding the climbing axes in each hand. This process continues for what feels like forever when you start hearing a stream. Suddenly, one hand feels air and you quikly retract it. There must be a stream below you in some chasm. You feel around and find an opening to youre left as well as your right.");
+	adv.addPath(__LINE__, "contWalkingSafe", "You get on your hands and knees not knowing what\'s ahead. You start crawling in a slow manner while holding the climbing axes in each hand. This process continues for what feels like forever when you start hearing a stream. Suddenly, one hand feels air and you quikly retract it. There must be a stream below you in some chasm. You feel around and find an opening to youre left as well as your right.");
+	
+	adv.setupChoice("go back", "ledgePlace");
+	adv.addPath(__LINE__, "leftGoWalkyDo", "You start crawling to your left when your hand bumps into a wall. It is clear that this is a dead end. You feel like there are grooves etched into the walls. They spell \"Budget Cuts\".");
+
+	adv.setupChoice("go left", "leftGoWalkyDo");
+	adv.setupChoice("go right", "falseHope");
+	adv.setupChoice("use climbing axe", "climbDownSafe");
+	adv.setupChoice("climb down using climbing axe", "climbDownSafe");
+	adv.setupChoice("climb down", "fallDeath2");
+	adv.addPath(__LINE__, "ledgePlace", "You are once again at the chasm.");
+
+
+	adv.setupChoice("let go of the climbing axe", "waterDrop");
+	adv.setupChoice("let go of climbing axe", "waterDrop");
+	adv.addPath(__LINE__, "climbDownSafe", "You swing the climbing axe into the ledge below you. It takes a grip and you slowly slide your body over the ledge. You swing the other axe and it peirces the ledge. Slowly but surely, you make it to the bottom of the chasm. The rushing water progressively gets louder as you make your way down. You proceedto put your foot down another step when it hits water. You have reached the bottom of the chasm and feel the water moving. The depth of the water is unknown. You are still holding onto a climbing axe.");
+
+	adv.setupChoice("filler", "end");
+	adv.addPath(__LINE__, "waterDrop", "Filler");
 
 	adv.setupChoice("break the wall with climbing axe", "breakWall");
 	adv.setupChoice("break the wall with a climbing axe", "breakWall");
