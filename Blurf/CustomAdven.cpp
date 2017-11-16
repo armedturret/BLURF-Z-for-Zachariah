@@ -1,6 +1,12 @@
 #include "CustomAdven.h"
 #include <iostream>
+
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32)
 #include <Windows.h>
+#else
+#include <unistd.h>
+#include <term.h>
+#endif
 #include <fstream>
 void CustomAdven::begin()
 {
@@ -260,6 +266,7 @@ std::string CustomAdven::getValidInput(std::string id, path origin)
 
 void CustomAdven::clearScreen()
 {
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32)
 	HANDLE                     hStdOut;
 	CONSOLE_SCREEN_BUFFER_INFO csbi;
 	DWORD                      count;
@@ -293,10 +300,22 @@ void CustomAdven::clearScreen()
 
 	/* Move the cursor home */
 	SetConsoleCursorPosition(hStdOut, homeCoords);
+#else
+	if (!cur_term)
+	{
+		int result;
+		setupterm(NULL, STDOUT_FILENO, &result);
+		if (result <= 0) return;
+	}
+
+	putp(tigetstr("clear"));
+#endif
 }
 
 void CustomAdven::printRedWarning(std::string text)
 {
+
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32)
 	HANDLE hstdout = GetStdHandle(STD_OUTPUT_HANDLE);
 	WORD   index = 0;
 
@@ -308,4 +327,13 @@ void CustomAdven::printRedWarning(std::string text)
 	std::cout << text;
 	// Keep users happy
 	SetConsoleTextAttribute(hstdout, csbi.wAttributes);
+#else
+#ifndef RESET
+#define RESET   "\033[0m"
+#endif
+#ifndef RED
+#define RED     "\033[31m"      /* Red */
+#endif
+	std::cout << RED << text << RESET;
+#endif
 }
