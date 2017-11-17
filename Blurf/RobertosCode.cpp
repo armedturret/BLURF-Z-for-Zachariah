@@ -159,14 +159,14 @@ void RobertosCode::run(CustomAdven & adv)
 
 	adv.setupChoice("q", "end");
 	adv.setupChoice("r", "start");
-	adv.addPath(__LINE__, "bedFail", "You attempt to get out of bed but you can't get your arms to support yourself. The person sitting next to you notices this. \"You all right?\" they say. You look at them and nod. \"We found you floating in the radioactive river right near the wall. We used a long stick to pull you out and took off that suit from you. It's a miracle you survived out there. Don't worry your safe here now.\" You lie back down and then notice the window and you can't beleive your eyes when you see the green of trees from plants. Your journey is over.\nType r to restart or q to quit");
+	adv.addPath(__LINE__, "bedFail", "You attempt to get out of bed but you can't get your arms to support yourself. The person sitting next to you notices this. \"You all right?\" they say. You look at them and nod. \"We found you floating in the radioactive river right near the wall. We used a long stick to pull you out and took off that suit from you. It's a miracle you survived out there. Don't worry your safe here now.\" You lie back down and then notice the window and you can't believe your eyes when you see the green of trees from plants. Your journey is over.\nType r to restart or q to quit");
 
 	adv.setupChoice("break the wall with climbing axe", "breakWall");
 	adv.setupChoice("break the wall with a climbing axe", "breakWall");
 	adv.setupChoice("break the wall with the climbing axes", "breakWall");
 	adv.setupChoice("break the wall with climbing axes", "breakWall");
 	adv.setupChoice("break the wall", "attemptBreak");
-	adv.addPath(__LINE__, "falseHope","You decide to go right along the ledge. You crawl on your hands and knees until you find a tunnel entrance and the rushing water sound starts fading behind you. You reach a turn when you beleive you see something shining up ahead. You shake with joy as you see the light ahead. You get up and starting running down the tunnel as your vision becomes clearer. Your eyes didn't deceive you as there is a rock wall with cracks of light coming through.");
+	adv.addPath(__LINE__, "falseHope","You decide to go right along the ledge. You crawl on your hands and knees until you find a tunnel entrance and the rushing water sound starts fading behind you. You reach a turn when you believe you see something shining up ahead. You shake with joy as you see the light ahead. You get up and starting running down the tunnel as your vision becomes clearer. Your eyes didn't deceive you as there is a rock wall with cracks of light coming through.");
 
 	adv.setupChoice("cancel", "cancelBreak");
 	adv.setupChoice("use climbing axe", "breakWall");
