@@ -27,7 +27,7 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("examine the bricks", "brickLook1");
 	adv.setupChoice("examine bricks", "brickLook1");
 	adv.setupChoice("eat a brick to gain its powers", "brickWizard");
-	adv.addPath(__LINE__, "start", "After walking for some time trailing the wagon behind you, you find your self in a desolate forest. The leaves on the trees have fallen off long ago. You see bricks on the ground. Perhaps you could find supplies somewhere around here.");
+	adv.addPath(__LINE__, "start", "You decide to follow the highway west. You remember from the map of the county that their may be a valley there. After walking for some time trailing the wagon behind you, the road ends abruptly. The road turns left but you need to continue forwards. You don't remember this on the map but then again you haven't seen that map for four years. You enter the desolate forest ahead of you. The leaves on the trees have fallen off long ago. After walking for sometime, you see bricks on the ground. Perhaps you could find supplies somewhere around here.");
 	
 	adv.setupChoice("eat a brick to gain its powers", "brickWizard");
 	adv.setupChoice("go west", "forest2");
@@ -74,6 +74,9 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("continue west", "forest2");
 	adv.addPath(__LINE__, "returnToCart", "You leave the shack and return to the cart. You are ready to resume your journey westward.");
 
+	adv.setupChoice("climb out using climbing axes", "forestEscaped1");
+	adv.setupChoice("climb out using the climbing axes", "forestEscaped1");
+	adv.setupChoice("climb out", "climbOut");
 	adv.setupChoice("climb up walls", "climbOut");
 	adv.setupChoice("climb up wall", "climbOut");
 	adv.setupChoice("climb up the walls", "climbOut");
@@ -87,24 +90,51 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("enter the darkness", "cave1");
 	adv.setupChoice("enter dark opening", "cave1");
 	adv.setupChoice("enter darkness", "cave1");
-	adv.addPath(__LINE__, "shackWithOutAxe","You pick up the climbing axes and you hear a slight crumbling sound in the shack. You jump thinking that someone is following you. Could John possibly have left the valley? Before you have the chance to turn around, the ground cracks open and you fall in. You are now in a pit that's about 30 ft deep. You look around the pit. The only light is from the hole above. Ahead of you is a dark opening. The light above you is slowly diminishing as it's getting late.");
+	adv.addPath(__LINE__, "shackWithOutAxe","You pick up the climbing axes and you hear a slight crumbling sound in the shack. You jump thinking that someone is following you. Could John possibly have left the valley? Before you have the chance to turn around, the ground cracks open and you fall in. You are now in a pit that's about 30 ft deep. You look around the pit. The only light is from the hole above. Ahead of you is a dark opening in the pit wall.");
 
-	adv.setupChoice("use climbing axes", /*"forestEscaped1"*/"end");
-	adv.setupChoice("use the climbing axes", /*"forestEscaped1"*/"end");
+	adv.setupChoice("use climbing axes", "forestEscaped1");
+	adv.setupChoice("use the climbing axes", "forestEscaped1");
 	adv.setupChoice("cancel", "caveLook");
 	adv.addPath(__LINE__, "climbOut", "The walls are too smooth and too steep to climb. Perhaps you can use some kind of tool.");
 
+	adv.setupChoice("climb out using climbing axes", "forestEscaped1");
+	adv.setupChoice("climb out using the climbing axes", "forestEscaped1");
+	adv.setupChoice("climb out", "climbOut");
+	adv.setupChoice("climb up walls", "climbOut");
+	adv.setupChoice("climb up wall", "climbOut");
+	adv.setupChoice("climb up the walls", "climbOut");
+	adv.setupChoice("climb up the wall", "climbOut");
+	adv.setupChoice("climb up from the pit", "climbOut");
+	adv.setupChoice("climb out of pit", "climbOut");
+	adv.setupChoice("climb out of the pit", "climbOut");
 	adv.setupChoice("go into dark opening", "cave1");
 	adv.setupChoice("go into darkness", "cave1");
 	adv.setupChoice("enter the dark opening", "cave1");
 	adv.setupChoice("enter the darkness", "cave1");
-	adv.setupChoice("enter the opening", "cave1");
-	adv.setupChoice("enter opening", "cave1");
 	adv.setupChoice("enter dark opening", "cave1");
 	adv.setupChoice("enter darkness", "cave1");
+	adv.addPath(__LINE__, "forestEscaped1", "You hit the wall with climbing axes and it digs in. You repeat the process until you reach the top. You are about to exit the pit when your next hit with climbing axe slips and you fall back into the pit. Ahead of you is a dark opening in the pit wall.");
+
+	adv.setupChoice("climb out using climbing axes", "forestEscaped1");
+	adv.setupChoice("climb out using the climbing axes", "forestEscaped1");
 	adv.setupChoice("climb out", "climbOut");
+	adv.setupChoice("climb up walls", "climbOut");
+	adv.setupChoice("climb up wall", "climbOut");
+	adv.setupChoice("climb up the walls", "climbOut");
+	adv.setupChoice("climb up the wall", "climbOut");
+	adv.setupChoice("climb up from the pit", "climbOut");
+	adv.setupChoice("climb out of pit", "climbOut");
+	adv.setupChoice("climb out of the pit", "climbOut");
+	adv.setupChoice("go into dark opening", "cave1");
+	adv.setupChoice("go into darkness", "cave1");
+	adv.setupChoice("enter the dark opening", "cave1");
+	adv.setupChoice("enter the darkness", "cave1");
+	adv.setupChoice("enter dark opening", "cave1");
+	adv.setupChoice("enter darkness", "cave1");
 	adv.addPath(__LINE__, "caveLook", "You look around the pit. The only light is from the hole above. Ahead of you is a dark opening. The light above you is slowly diminishing as it's getting late.");
 	
+	adv.setupChoice("start crawling", "contWalkingSafe");
+	adv.setupChoice("crawl", "contWalkingSafe");
 	adv.setupChoice("crawl on hands and knees", "contWalkingSafe");
 	adv.setupChoice("get on all fours", "contWalkingSafe");
 	adv.setupChoice("crawl on all fours", "contWalkingSafe");
@@ -124,12 +154,18 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("r", "start");
 	adv.addPath(__LINE__, "contWalking", "You continue walking in the darkness. After a while, your steps begin to echo around the walls. You even start to hear running water. That's when your next step feels air. The next thing you know, you are falling through the darkness when you feel something hard hit your head and it is all over.\nTIP: Try finding a safer way to walk through darkness\nType r to restart or q to quit");
 
+	adv.setupChoice("enter the opening on the left", "leftGoWalkyDo");
+	adv.setupChoice("enter left opening", "leftGoWalkyDo");
+	adv.setupChoice("enter the left opening", "leftGoWalkyDo");
 	adv.setupChoice("go left", "leftGoWalkyDo");
 	adv.setupChoice("go right", "falseHope");
+	adv.setupChoice("enter the opening on the right", "falseHope");
+	adv.setupChoice("enter right opening", "falseHope");
+	adv.setupChoice("enter the right opening", "falseHope");
 	adv.setupChoice("use climbing axe", "climbDownSafe");
 	adv.setupChoice("climb down using climbing axe", "climbDownSafe");
 	adv.setupChoice("climb down", "fallDeath2");
-	adv.addPath(__LINE__, "contWalkingSafe", "You get on your hands and knees not knowing what\'s ahead. You start crawling in a slow manner while holding the climbing axes in each hand. This process continues for what feels like forever when you start hearing a stream. Suddenly, one hand feels air and you quikly retract it. There must be a stream below you in some chasm. You feel around and find an opening to youre left as well as your right.");
+	adv.addPath(__LINE__, "contWalkingSafe", "You get on your hands and knees not knowing what\'s ahead. You start crawling in a slow manner while holding the climbing axes in each hand. This process continues for what feels like forever when you start hearing a stream. Suddenly, one hand feels air and you quikly retract it. There must be a stream below you in some chasm. You feel around and find an opening to your left as well as your right.");
 	
 	adv.setupChoice("go back", "ledgePlace");
 	adv.addPath(__LINE__, "leftGoWalkyDo", "You start crawling to your left when your hand bumps into a wall. It is clear that this is a dead end. You feel like there are grooves etched into the walls. They spell \"Budget Cuts\".");
