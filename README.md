@@ -1,10 +1,13 @@
-# BLURF-Engine: Z for Zachariah
-## A Text Adventure Sequal Based off of Robert C. O'Brien's Popular Book
-### Scripted by Robert White, Andrew Winters, and Aiden Bewly
-Text Adventure game for our English project.
+## BLURF-Engine: Z for Zachariah
+A Text Adventure Sequal Based off of Robert C. O'Brien's Popular Book for an english project
 
-Follows the story off the character Ann in Robert C. O'Brien's "Z for Zachariah" after the events of the book.
+# Setting Up
+Download visual studio 2017 as well as the github extension for it then on the github page click on open in visual studio.
 
-Basic C++ Text Adventure system.
+# Contributing
+You can't.
 
-2017
+# Project Definiton
+A mix of a programming hobby as well as a text adventure for the one and only Yimbo Yenkin's english class.
+
+###### NOICE
