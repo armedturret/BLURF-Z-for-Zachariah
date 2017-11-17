@@ -4,6 +4,13 @@
 #include <functional>
 #include <vector>
 
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32)
+#include <Windows.h>
+#else
+#include <unistd.h>
+#include <term.h>
+#endif
+
 struct choice {
 	choice() : option(""), destinationChoice("") {}
 	choice(std::string option, std::string destinationChoice) : option(option), destinationChoice(destinationChoice) {}

@@ -1,12 +1,6 @@
 #include "CustomAdven.h"
 #include <iostream>
 
-#if defined(WIN32) || defined(_WIN32) || defined(__WIN32)
-#include <Windows.h>
-#else
-#include <unistd.h>
-#include <term.h>
-#endif
 #include <fstream>
 void CustomAdven::begin()
 {

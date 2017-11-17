@@ -25,6 +25,7 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("look at the bricks", "brickLook1");
 	adv.setupChoice("look at bricks", "brickLook1");
 	adv.setupChoice("examine the bricks", "brickLook1");
+	adv.setupChoice("examine bricks", "brickLook1");
 	adv.setupChoice("eat a brick to gain its powers", "brickWizard");
 	adv.addPath(__LINE__, "start", "After walking for some time trailing the wagon behind you, you find your self in a desolate forest. The leaves on the trees have fallen off long ago. You see bricks on the ground. Perhaps you could find supplies somewhere around here.");
 	
@@ -145,8 +146,20 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("let go of climbing axe", "waterDrop");
 	adv.addPath(__LINE__, "climbDownSafe", "You swing the climbing axe into the ledge below you. It takes a grip and you slowly slide your body over the ledge. You swing the other axe and it peirces the ledge. Slowly but surely, you make it to the bottom of the chasm. The rushing water progressively gets louder as you make your way down. You proceedto put your foot down another step when it hits water. You have reached the bottom of the chasm and feel the water moving. The depth of the water is unknown. You are still holding onto a climbing axe.");
 
-	adv.setupChoice("filler", "end");
-	adv.addPath(__LINE__, "waterDrop", "Filler");
+	adv.setupChoice("stand up", "bedFail");
+	adv.setupChoice("get up", "bedFail");
+	adv.setupChoice("get out of bed", "bedFail");
+	adv.setupChoice("talk to her", "talk");
+	adv.setupChoice("talk to woman", "talk");
+	adv.addPath(__LINE__, "waterDrop", "You let go of the climbaxe and to your surprise land on your feet. The water turns out to only be a couple of inches deep. You proceed to take a step when suddenly your foot slips and you fall into the water. The water starts carrying you away with a strong current. Any attempt to get back up ends in failure. Suddenly, your head knocks into something hard to and you are knocked out. You begin to hear a ringing noise and blinding light hits your eyes. Wait, light? You begin to adjust to light levels and find yourself on a bed in a room. The radiation suit is gone. To your right is a woman sitting in a chair looking at you.");
+
+	adv.setupChoice("q", "end");
+	adv.setupChoice("r", "start");
+	adv.addPath(__LINE__, "talk", "You look at the person sitting in the chair next to you and ask \"Where am I?\" The person looks at you and replies with \"Your in the valley of course. This place survived the fallout when the bombs hit and a large group of us were lucky enough to be here. We have a farm and everything we need to survive here. It\'s a miracle that you survived out there. That must be one special suit you had.\" You then ask how you got there. \"We found unconcious floating in the radioactive river. Some of the guys pulled you out using some long sticks and now here you are.\" You look around the room and notice a window. Outside is the green of trees. Your journey is over.\nType r to restart or q to quit");
+
+	adv.setupChoice("q", "end");
+	adv.setupChoice("r", "start");
+	adv.addPath(__LINE__, "bedFail", "You attempt to get out of bed but you can't get your arms to support yourself. The person sitting next to you notices this. \"You all right?\" they say. You look at them and nod. \"We found you floating in the radioactive river right near the wall. We used a long stick to pull you out and took off that suit from you. It's a miracle you survived out there. Don't worry your safe here now.\" You lie back down and then notice the window and you can't beleive your eyes when you see the green of trees from plants. Your journey is over.\nType r to restart or q to quit");
 
 	adv.setupChoice("break the wall with climbing axe", "breakWall");
 	adv.setupChoice("break the wall with a climbing axe", "breakWall");
@@ -181,7 +194,7 @@ void RobertosCode::run(CustomAdven & adv)
 
 	adv.setupChoice("q", "end");
 	adv.setupChoice("r", "start");
-	adv.addPath(__LINE__,"fallDeath2","You put your feet over the ledge and hang on to it as you drop your body down. You reach out in the darkness to find another handhold when you slip and realize that this may not have been such a bright idea. You loose your grip and fall into the blackness below.\nTIP: Is there some equipment you can use to safely go down?");
+	adv.addPath(__LINE__,"fallDeath2","You put your feet over the ledge and hang on to it as you drop your body down. You reach out in the darkness to find another handhold when you slip and realize that this may not have been such a bright idea. You loose your grip and fall into the blackness below.\nTIP: Is there some equipment you can use to safely go down?\nType r to restart or q to quit");
 
 	adv.setupChoice("search the cars", "end");
 	adv.addPath(__LINE__, "forest2", "After walking west for more time, you see a splotch of gray in the distance. You bring the cart closer with you to see what it is. You a highway with some burned out cars up and down the road.");
