@@ -13,6 +13,7 @@ void RobertosCode::run(CustomAdven & adv)
 {	
 	adv.setupChoice("go west", "forest2");
 	adv.setupChoice("keep walking", "forest2");
+	adv.setupChoice("continue walking", "forest2");
 	adv.setupChoice("continue west", "forest2");
 	adv.setupChoice("keep going", "forest2");
 	adv.setupChoice("search the forest", "forest1search");
@@ -27,7 +28,7 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("examine the bricks", "brickLook1");
 	adv.setupChoice("examine bricks", "brickLook1");
 	adv.setupChoice("eat a brick to gain its powers", "brickWizard");
-	adv.addPath(__LINE__, "start", "You decide to follow the highway west. You remember from the map of the county that their may be a valley there. After walking for some time trailing the wagon behind you, the road ends abruptly. The road turns left but you need to continue forwards. You don't remember this on the map but then again you haven't seen that map for four years. You enter the desolate forest ahead of you. The leaves on the trees have fallen off long ago. After walking for sometime, you see bricks on the ground. Perhaps you could find supplies somewhere around here.");
+	adv.addPath(__LINE__, "start", "You decide to follow the highway west. You remember from the map of the county that their may be a valley there. After walking for some time trailing the wagon behind you, the road ends abruptly. The road turns left but you need to continue forwards. You don't remember this on the map but then again you haven't seen that map for four years. You enter the desolate forest ahead of you. The leaves on the trees have fallen off long ago. After walking for sometime, you see bricks on the ground. Perhaps you could find supplies somewhere around here or continue walking.");
 	
 	adv.setupChoice("eat a brick to gain its powers", "brickWizard");
 	adv.setupChoice("go west", "forest2");
@@ -233,5 +234,5 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.addPath(__LINE__,"fallDeath2","You put your feet over the ledge and hang on to it as you drop your body down. You reach out in the darkness to find another handhold when you slip and realize that this may not have been such a bright idea. You loose your grip and fall into the blackness below.\nTIP: Is there some equipment you can use to safely go down?\nType r to restart or q to quit");
 
 	adv.setupChoice("search the cars", "end");
-	adv.addPath(__LINE__, "forest2", "After walking west for more time, you see a splotch of gray in the distance. You bring the cart closer with you to see what it is. You a highway with some burned out cars up and down the road.");
+	adv.addPath(__LINE__, "forest2", "After walking west for more time, you see a splotch of gray in the distance. You bring the cart closer with you to see what it is. You find out you have reached the highway.");
 }
