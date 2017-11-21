@@ -44,7 +44,10 @@ struct binChoice {
 
 
 inline std::string defaultBehavior(std::string input, path currentPath) {
-	return currentPath.choices.find(input)->second;
+	if (input.substr(0, 1) != "+")
+		return currentPath.choices.find(input)->second;
+	else
+		return input.substr(1, input.length() - 1);
 }
 
 class CustomAdven

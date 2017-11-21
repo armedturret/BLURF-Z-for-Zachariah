@@ -247,9 +247,18 @@ std::string CustomAdven::getValidInput(std::string id, path origin)
 
 		std::string choice;
 		std::getline(std::cin, choice);
+#ifdef _DEBUG
+		std::string originalChoice(choice);
+#endif
 		toCaps(choice);
 		if (origin.choices.find(choice) != origin.choices.end())
 			return choice;
+#ifdef _DEBUG
+		else if (originalChoice.length() > 1 && originalChoice.substr(0, 1) == "+")
+		{
+			return originalChoice;
+		}
+#endif
 		clearScreen();
 #ifdef _DEBUG
 		std::cout << id<<": ";
