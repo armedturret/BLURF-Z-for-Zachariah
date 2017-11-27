@@ -50,6 +50,10 @@ inline std::string defaultBehavior(std::string input, path currentPath) {
 		return input.substr(1, input.length() - 1);
 }
 
+inline void defaultEnd() {
+	//do nothing
+}
+
 class CustomAdven
 {
 public:
@@ -65,7 +69,7 @@ public:
 
 	void writeAsBinary(std::string file);
 
-	void runPaths();
+	void runPaths(std::function<void()> endFunction = defaultEnd);
 
 	void clearScreen();
 private:

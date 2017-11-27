@@ -20,22 +20,3 @@ Surprise.txt: Don't open this file as its something the engine needs to run and 
 Tips:
 Don't make ambiguous actions i.e. say "jump over bar" rather than "jump over"
 Say "cancel" to stop examining something i.e. if you say "open door" but it says you don't have a key say "cancel"
-
-
-
-
-Credits:
-
-BLURF Text-Engine\Debugger Person: Robert White
-
-
-
-Story for going north from start: Aiden Bewley
-
-
-
-Story for going west from start: Robert White
-
-
-
-Story for going south from start: Andrew Winters

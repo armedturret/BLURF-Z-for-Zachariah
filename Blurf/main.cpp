@@ -4,7 +4,8 @@
 #include <Windows.h>
 #include <map>
 #include <fstream>
-//TESTY MCTEST
+#include <functional>
+
 #include "CustomAdven.h"
 
 #include "andrews_class.h"
@@ -72,6 +73,13 @@ void robertosCode(CustomAdven& adv) {
 #endif
 }
 
+std::function<void()> endFunction = [](){
+	std::ifstream Reader("Credits.txt");
+	std::cout << getFileContents(Reader)<<std::endl;
+	std::string a;
+	std::getline(std::cin, a);
+};
+
 int main() {
 	//stuff to appear on start up
 	std::string startUpText = "You are playing as Anne Burden from the Robert C. O'Briens\' novel Z for Zacharia. You have just left the valley and are a safe distance away from the insane John Loomis. Now, you must choose which direction to go in. He is yelling that to the west he saw birds. Now you simply need to choose a direction to go in.";
@@ -136,7 +144,7 @@ int main() {
 	}
 	
 
-	adv.runPaths();
+	adv.runPaths(endFunction);
 	
 	return 0;
 }

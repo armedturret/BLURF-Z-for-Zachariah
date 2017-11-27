@@ -161,7 +161,7 @@ void CustomAdven::writeAsBinary(std::string file)
 #endif
 }
 
-void CustomAdven::runPaths()
+void CustomAdven::runPaths(std::function<void()> endFunction)
 {
 #ifdef _DEBUG
 
@@ -194,7 +194,7 @@ void CustomAdven::runPaths()
 		input = getValidInput(nextPathID, currentPath);
 		safeCheckID = currentPath.customBehavior(input, currentPath);
 #ifdef _DEBUG
-		while (m_choiceMap.find(safeCheckID) == m_choiceMap.end()) {
+		while (m_choiceMap.find(safeCheckID) == m_choiceMap.end() && safeCheckID != "end") {
 			clearScreen();
 			std::cout << nextPathID<< ": ";
 			print(currentPath.text);
@@ -203,15 +203,13 @@ void CustomAdven::runPaths()
 		}
 #endif // _DEBUG
 		nextPathID = safeCheckID;
-		if (nextPathID == "end")
+		if (nextPathID == "end") {
+			clearScreen();
+			endFunction();
 			break;
+		}
 		clearScreen();
 	}
-#ifdef _DEBUG
-	std::cout << "THE END" << std::endl;
-	std::string c;
-	std::getline(std::cin, c);
-#endif
 }
 
 bool CustomAdven::safecheck()

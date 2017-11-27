@@ -1,0 +1,9 @@
+			Credits:
+============================================================
+BLURF Text-Adventure Engine/Debugger Person: Robert White
+
+Story for go north at start: Aiden Bewley
+
+Story for go west at start: Robert White
+
+Story for go south at start: Andrew Winters

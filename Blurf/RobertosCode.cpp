@@ -246,6 +246,7 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("filler", "end");
 	adv.addPath(__LINE__,"bunker","You walk to the bunker. At the door you almost scream when you see the corpses lying in the doorway. The door is open and you walk around the mound and enter. Inside you see what used to be gaurds sitting in chairs facing the door. The guns lying next to them tell the entire story. You quickly leave the place not wanting to be reminded of the horrors that occured there.");
 
-	adv.setupChoice("filler", "end");
-	adv.addPath(__LINE__, "valleyThing", "filler");
+	adv.setupChoice("q", "end");
+	adv.setupChoice("r", "start");
+	adv.addPath(__LINE__, "valleyThing", "You continue west aloung the highway avoiding looking at whatever cars you pass fearing to see the corpses inside. After about an hour or so, you see green. At first you beleive its a trick of the eye but as you get closer you realize it is really there; Green trees on the edge of a valley. You pull the cart behind you excitedly as you arrive filled with hope to the valley. You climb over the edge to see a town with live people walking about. You have finally found a safe place to live.\nType r to restart or q to quit");
 }
