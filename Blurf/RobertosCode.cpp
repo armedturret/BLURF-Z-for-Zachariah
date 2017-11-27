@@ -233,8 +233,19 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("r", "start");
 	adv.addPath(__LINE__,"fallDeath2","You put your feet over the ledge and hang on to it as you drop your body down. You reach out in the darkness to find another handhold when you slip and realize that this may not have been such a bright idea. You loose your grip and fall into the blackness below.\nTIP: Is there some equipment you can use to safely go down?\nType r to restart or q to quit");
 
-	adv.setupChoice("continue walking", "end");
+	adv.setupChoice("go west", "valleyThing");
+	adv.setupChoice("keep walking", "valleyThing");
+	adv.setupChoice("continue walking", "valleyThing");
+	adv.setupChoice("continue west", "valleyThing");
+	adv.setupChoice("keep going", "valleyThing");
+	adv.setupChoice("continue walking", "valleyThing");
 	adv.setupChoice("go to gas station", "end");
-	adv.setupChoice("go to bunker", "end");
+	adv.setupChoice("go to bunker", "bunker");
 	adv.addPath(__LINE__, "forest2", "After walking west for more time, you see a splotch of gray in the distance. You bring the cart closer with you to see what it is. You find out you have reached the highway. In the distance you see a bunker as well as a gas station.");
+
+	adv.setupChoice("filler", "end");
+	adv.addPath(__LINE__,"bunker","You walk to the bunker. At the door you almost scream when you see the corpses lying in the doorway. The door is open and you walk around the mound and enter. Inside you see what used to be gaurds sitting in chairs facing the door. The guns lying next to them tell the entire story. You quickly leave the place not wanting to be reminded of the horrors that occured there.");
+
+	adv.setupChoice("filler", "end");
+	adv.addPath(__LINE__, "valleyThing", "filler");
 }
