@@ -181,6 +181,7 @@ void CustomAdven::runPaths()
 	clearScreen();
 #endif
 	std::string nextPathID = "start";
+	std::string safeCheckID = "start";
 	std::string input = "start";
 	path currentPath;
 	while (true) {
@@ -191,13 +192,17 @@ void CustomAdven::runPaths()
 		print(currentPath.text);
 
 		input = getValidInput(nextPathID, currentPath);
-		nextPathID = currentPath.customBehavior(input, currentPath);
+		safeCheckID = currentPath.customBehavior(input, currentPath);
 #ifdef _DEBUG
-		while (m_choiceMap.find(nextPathID) == m_choiceMap.end()) {
+		while (m_choiceMap.find(safeCheckID) == m_choiceMap.end()) {
+			clearScreen();
+			std::cout << nextPathID<< ": ";
+			print(currentPath.text);
 			input = getValidInput(nextPathID, currentPath);
-			nextPathID = currentPath.customBehavior(input, currentPath);
+			safeCheckID= currentPath.customBehavior(input, currentPath);
 		}
 #endif // _DEBUG
+		nextPathID = safeCheckID;
 		if (nextPathID == "end")
 			break;
 		clearScreen();
