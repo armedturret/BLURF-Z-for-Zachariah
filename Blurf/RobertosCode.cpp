@@ -168,6 +168,9 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("climb down", "fallDeath2");
 	adv.addPath(__LINE__, "contWalkingSafe", "You get on your hands and knees not knowing what\'s ahead. You start crawling in a slow manner while holding the climbing axes in each hand. This process continues for what feels like forever when you start hearing a stream. Suddenly, one hand feels air and you quikly retract it. There must be a stream below you in some chasm. You feel around and find an opening to your left as well as your right.");
 	
+	adv.setupChoice("cancel", "ledgePlace");
+	adv.setupChoice("return to ledge", "ledgePlace");
+	adv.setupChoice("go back to ledge", "ledgePlace");
 	adv.setupChoice("go back", "ledgePlace");
 	adv.addPath(__LINE__, "leftGoWalkyDo", "You start crawling to your left when your hand bumps into a wall. It is clear that this is a dead end. You feel like there are grooves etched into the walls. They spell \"Budget Cuts\".");
 
@@ -240,6 +243,9 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("keep going", "valleyThing");
 	adv.setupChoice("continue walking", "valleyThing");
 	adv.setupChoice("go to bunker", "bunker");
+	adv.setupChoice("walk to bunker", "bunker");
+	adv.setupChoice("go bunker", "bunker");
+	adv.setupChoice("walk bunker", "bunker");
 	adv.addPath(__LINE__, "forest2", "After walking west for more time, you see a splotch of gray in the distance. You bring the cart closer with you to see what it is. You find out you have reached the highway. In the distance you see a bunker on the side of the road and an long stretch of highway.");
 
 	adv.setupChoice("go west", "valleyThing");
