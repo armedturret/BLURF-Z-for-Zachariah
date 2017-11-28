@@ -239,11 +239,15 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("continue west", "valleyThing");
 	adv.setupChoice("keep going", "valleyThing");
 	adv.setupChoice("continue walking", "valleyThing");
-	adv.setupChoice("go to gas station", "end");
 	adv.setupChoice("go to bunker", "bunker");
-	adv.addPath(__LINE__, "forest2", "After walking west for more time, you see a splotch of gray in the distance. You bring the cart closer with you to see what it is. You find out you have reached the highway. In the distance you see a bunker as well as a gas station.");
+	adv.addPath(__LINE__, "forest2", "After walking west for more time, you see a splotch of gray in the distance. You bring the cart closer with you to see what it is. You find out you have reached the highway. In the distance you see a bunker on the side of the road and an long stretch of highway.");
 
-	adv.setupChoice("filler", "end");
+	adv.setupChoice("go west", "valleyThing");
+	adv.setupChoice("keep walking", "valleyThing");
+	adv.setupChoice("continue walking", "valleyThing");
+	adv.setupChoice("continue west", "valleyThing");
+	adv.setupChoice("keep going", "valleyThing");
+	adv.setupChoice("continue walking", "valleyThing");
 	adv.addPath(__LINE__,"bunker","You walk to the bunker. At the door you almost scream when you see the corpses lying in the doorway. The door is open and you walk around the mound and enter. Inside you see what used to be gaurds sitting in chairs facing the door. The guns lying next to them tell the entire story. You quickly leave the place not wanting to be reminded of the horrors that occured there.");
 
 	adv.setupChoice("q", "end");

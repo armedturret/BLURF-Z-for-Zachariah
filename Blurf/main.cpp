@@ -133,7 +133,7 @@ int main() {
 		}
 		else if (b == "CRIPPLETRON") {
 			adv.clearScreen();
-			std::ifstream Reader("Surprise.txt");
+			std::ifstream Reader("Deps.eng");
 
 			adv.setupChoice("q", "end");
 			adv.addPath(__LINE__, "start", getFileContents(Reader)+"\nType q to quit.");

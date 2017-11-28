@@ -15,7 +15,9 @@ IMPORTANT: If you receive a "dll missing" error, run vcredist(x86) to fix it. Th
 
 
 
-Surprise.txt: Don't open this file as its something the engine needs to run and is general nonsense to the human eye.
+Deps.eng: Don't open this file as its something the engine needs to run and is general nonsense to the human eye.
+
+Credits.txt: The credits for the project.
 
 Tips:
 Don't make ambiguous actions i.e. say "jump over bar" rather than "jump over"
