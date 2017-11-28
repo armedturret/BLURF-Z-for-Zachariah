@@ -28,7 +28,7 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("examine the bricks", "brickLook1");
 	adv.setupChoice("examine bricks", "brickLook1");
 	adv.setupChoice("eat a brick to gain its powers", "brickWizard");
-	adv.addPath(__LINE__, "start", "You decide to follow the highway west. You remember from the map of the county that their may be a valley there. After walking for some time trailing the wagon behind you, the road ends abruptly. The road turns left but you need to continue forwards. You don't remember this on the map but then again you haven't seen it in years. You enter the desolate forest ahead of you. The leaves on the trees have fallen off long ago. After walking for sometime, you see bricks on the ground. Perhaps you could find supplies somewhere around here or continue walking.");
+	adv.addPath(__LINE__, "start", "You decide to follow the highway west. You remember from the map of the county that there may be a valley there. After walking for some time trailing the wagon behind you, the road ends abruptly. The road turns left but you need to continue forwards. You don't remember this on the map but then again you haven't seen it in years. You enter the desolate forest ahead of you. The leaves on the trees have fallen off long ago. After walking for some time, you see bricks on the ground. Perhaps you could find supplies somewhere around here or continue walking.");
 	
 	adv.setupChoice("eat a brick to gain its powers", "brickWizard");
 	adv.setupChoice("go west", "forest2");
@@ -153,7 +153,7 @@ void RobertosCode::run(CustomAdven & adv)
 
 	adv.setupChoice("q", "end");
 	adv.setupChoice("r", "start");
-	adv.addPath(__LINE__, "contWalking", "You continue walking in the darkness. After a while, your steps begin to echo around the walls. You even start to hear running water. That's when your next step feels air. The next thing you know, you are falling through the darkness when you feel something hard hit your head and it is all over.\nTIP: Try finding a safer way to walk through darkness\nType r to restart or q to quit");
+	adv.addPath(__LINE__, "contWalking", "You continue walking in the darkness. After a while, your steps begin to echo around the walls. You even start to hear running water. That's when your next step feels empty air. The next thing you know, you are falling through the darkness when you feel something hard hit your head and it is all over.\nTIP: Try finding a safer way to walk through darkness\nType r to restart or q to quit");
 
 	adv.setupChoice("enter the opening on the left", "leftGoWalkyDo");
 	adv.setupChoice("enter left opening", "leftGoWalkyDo");
@@ -184,18 +184,18 @@ void RobertosCode::run(CustomAdven & adv)
 
 	adv.setupChoice("let go of the climbing axe", "waterDrop");
 	adv.setupChoice("let go of climbing axe", "waterDrop");
-	adv.addPath(__LINE__, "climbDownSafe", "You swing the climbing axe into the ledge below you. It takes a grip and you slowly slide your body over the ledge. You swing the other axe and it peirces the ledge. Slowly but surely, you make it to the bottom of the chasm. The rushing water progressively gets louder as you make your way down. You proceedto put your foot down another step when it hits water. You have reached the bottom of the chasm and feel the water moving. The depth of the water is unknown. You are still holding onto a climbing axe.");
+	adv.addPath(__LINE__, "climbDownSafe", "You swing the climbing axe into the ledge below you. It takes a grip and you slowly slide your body over the ledge. You swing the other axe and it pierces the ledge. Slowly but surely, you make it to the bottom of the chasm. The rushing water progressively gets louder as you make your way down. You proceed to put your foot down another step when it hits water. You have reached the bottom of the chasm and feel the water moving. The depth of the water is unknown. You are still holding onto a climbing axe.");
 
 	adv.setupChoice("stand up", "bedFail");
 	adv.setupChoice("get up", "bedFail");
 	adv.setupChoice("get out of bed", "bedFail");
 	adv.setupChoice("talk to her", "talk");
 	adv.setupChoice("talk to woman", "talk");
-	adv.addPath(__LINE__, "waterDrop", "You let go of the climbaxe and to your surprise land on your feet. The water turns out to only be a couple of inches deep. You proceed to take a step when suddenly your foot slips and you fall into the water. The water starts carrying you away with a strong current. Any attempt to get back up ends in failure. Suddenly, your head knocks into something hard to and you are knocked out. You begin to hear a ringing noise and blinding light hits your eyes. Wait, light? You begin to adjust to light levels and find yourself on a bed in a room. The radiation suit is gone. To your right is a woman sitting in a chair looking at you.");
+	adv.addPath(__LINE__, "waterDrop", "You let go of the climbing axe and to your surprise land on your feet. The water turns out to only be a couple of inches deep. You proceed to take a step when suddenly your foot slips and you fall into the water. The water starts carrying you away with a strong current. Any attempt to get back up ends in failure. Suddenly, your head knocks into something hard to and you are knocked out. You begin to hear a ringing noise and blinding light hits your eyes. Wait, light? You begin to adjust to light levels and find yourself on a bed in a room. The radiation suit is gone. To your right is a woman sitting in a chair looking at you.");
 
 	adv.setupChoice("q", "end");
 	adv.setupChoice("r", "start");
-	adv.addPath(__LINE__, "talk", "You look at the person sitting in the chair next to you and ask \"Where am I?\" The person looks at you and replies with \"Your in the valley of course. This place survived the fallout when the bombs hit and a large group of us were lucky enough to be here. We have a farm and everything we need to survive here. It\'s a miracle that you survived out there. That must be one special suit you had.\" You then ask how you got there. \"We found unconcious floating in the radioactive river. Some of the guys pulled you out using some long sticks and now here you are.\" You look around the room and notice a window. Outside is the green of trees. Your journey is over.\nType r to restart or q to quit");
+	adv.addPath(__LINE__, "talk", "You look at the person sitting in the chair next to you and ask \"Where am I?\" The person looks at you and replies with \"You\'re in the valley of course. This place survived the fallout when the bombs hit and a large group of us were lucky enough to be here. We have a farm and everything we need to survive here. It\'s a miracle that you survived out there. That must be one special suit you had.\" You then ask how you got there. \"We found you unconscious floating in the radioactive river. Some of the guys pulled you out using some long sticks and now here you are.\" You look around the room and notice a window. Outside is the green of trees. Your journey is over.\nType r to restart or q to quit");
 
 	adv.setupChoice("q", "end");
 	adv.setupChoice("r", "start");
@@ -230,11 +230,11 @@ void RobertosCode::run(CustomAdven & adv)
 
 	adv.setupChoice("q", "end");
 	adv.setupChoice("r", "start");
-	adv.addPath(__LINE__, "backToTheStart", "You climb through the hole but luckily don't have to squint at the sun thanks to the filters on the suit. You look around you and see that you are at the entrance of a small cave. You take a couple steps out of it and stroll down a slope. You see behind some trees a house and upon your investigation realize where you are with horror. You have somehow treked your way back to your home valley. You turn to run away when you feel a sharp pain in your right knee and fall down. You try to get yp but you can't as there is a bullet in your knee. John comes out the front door of the house and smiles as he picks you up and takes you inside.\nTIP: Search for another path through the caves.\nType r to restart or q to quit");
+	adv.addPath(__LINE__, "backToTheStart", "You climb through the hole but luckily don't have to squint at the sun thanks to the filters on the suit. You look around you and see that you are at the entrance of a small cave. You take a couple steps out of it and stroll down a slope. You see behind some trees a house and upon your investigation realize where you are with horror. You have somehow made your way back to your home valley. You turn to run away when you feel a sharp pain in your right knee and fall down. You try to get up but you can't as there is a bullet in your knee. John comes out the front door of the house and smiles as he picks you up and takes you inside.\nTIP: Search for another path through the caves.\nType r to restart or q to quit");
 
 	adv.setupChoice("q", "end");
 	adv.setupChoice("r", "start");
-	adv.addPath(__LINE__,"fallDeath2","You put your feet over the ledge and hang on to it as you drop your body down. You reach out in the darkness to find another handhold when you slip and realize that this may not have been such a bright idea. You loose your grip and fall into the blackness below.\nTIP: Is there some equipment you can use to safely go down?\nType r to restart or q to quit");
+	adv.addPath(__LINE__,"fallDeath2","You put your feet over the ledge and hang on to it as you drop your body down. You reach out in the darkness to find another handhold when you slip and realize that this may not have been such a bright idea. You lose your grip and fall into the blackness below.\nTIP: Is there some equipment you can use to safely go down?\nType r to restart or q to quit");
 
 	adv.setupChoice("go west", "valleyThing");
 	adv.setupChoice("keep walking", "valleyThing");
@@ -258,5 +258,5 @@ void RobertosCode::run(CustomAdven & adv)
 
 	adv.setupChoice("q", "end");
 	adv.setupChoice("r", "start");
-	adv.addPath(__LINE__, "valleyThing", "You continue west aloung the highway avoiding looking at whatever cars you pass fearing to see the corpses inside. After about an hour or so, you see green. At first you beleive its a trick of the eye but as you get closer you realize it is really there; Green trees on the edge of a valley. You pull the cart behind you excitedly as you arrive filled with hope to the valley. You climb over the edge to see a town with live people walking about. You have finally found a safe place to live.\nType r to restart or q to quit");
+	adv.addPath(__LINE__, "valleyThing", "You continue west along the highway avoiding looking at whatever cars you pass fearing to see the corpses inside. After about an hour or so, you see green. At first, you believe its a trick of the eye but as you get closer you realize it is really there; Green trees on the edge of a valley. You pull the cart behind you excitedly as you arrive filled with hope to the valley. You climb over the edge to see a town with live people walking about. You have finally found a safe place to live.\nType r to restart or q to quit");
 }
