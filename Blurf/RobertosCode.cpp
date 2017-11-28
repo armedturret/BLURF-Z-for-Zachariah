@@ -211,14 +211,36 @@ void RobertosCode::run(CustomAdven & adv)
 	adv.setupChoice("cancel", "cancelBreak");
 	adv.setupChoice("use climbing axe", "breakWall");
 	adv.addPath(__LINE__, "attemptBreak", "You attempt to kick the wall to break through but is too solid to break through with your foot.");
-
+	
+	adv.setupChoice("hit wall with climbing axe", "breakWall");
+	adv.setupChoice("hit wall with a climbing axe", "breakWall");
+	adv.setupChoice("hit wall with the climbing axes", "breakWall");
+	adv.setupChoice("hit wall with climbing axes", "breakWall");
+	adv.setupChoice("break wall with climbing axe", "breakWall");
+	adv.setupChoice("break wall with a climbing axe", "breakWall");
+	adv.setupChoice("break wall with the climbing axes", "breakWall");
+	adv.setupChoice("break wall with climbing axes", "breakWall");
+	adv.setupChoice("break wall", "attemptBreak");
+	adv.setupChoice("hit the wall with climbing axe", "breakWall");
+	adv.setupChoice("hit the wall with a climbing axe", "breakWall");
+	adv.setupChoice("hit the wall with the climbing axes", "breakWall");
+	adv.setupChoice("hit the wall with climbing axes", "breakWall");
 	adv.setupChoice("break the wall with climbing axe", "breakWall");
 	adv.setupChoice("break the wall with a climbing axe", "breakWall");
 	adv.setupChoice("break the wall with the climbing axes", "breakWall");
 	adv.setupChoice("break the wall with climbing axes", "breakWall");
 	adv.setupChoice("break the wall", "attemptBreak");
+	adv.setupChoice("hit the wall", "attemptBreak");
+	adv.setupChoice("hit wall", "attemptBreak");
 	adv.addPath(__LINE__, "cancelBreak", "You are standing in front of wall with cracks of light seeping through it.");
 	
+	adv.setupChoice("exit the cave", "backToTheStart");
+	adv.setupChoice("exit the hole", "backToTheStart");
+	adv.setupChoice("climb through", "backToTheStart");
+	adv.setupChoice("climb through the hole", "backToTheStart");
+	adv.setupChoice("exit through the hole", "backToTheStart");
+	adv.setupChoice("enter the hole", "backToTheStart");
+	adv.setupChoice("go through the hole", "backToTheStart");
 	adv.setupChoice("exit cave", "backToTheStart");
 	adv.setupChoice("exit hole", "backToTheStart");
 	adv.setupChoice("climb through", "backToTheStart");
