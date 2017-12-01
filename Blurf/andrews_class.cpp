@@ -1,8 +1,16 @@
 #include "andrews_class.h"
 #include "CustomAdven.h"
 
+//To whom it may concern,
+
 //Just to clear up things a bit, guess who's computer's charger doesn't work? So this is a Surface. 1. That can't download things and only has IE. 
 //And so, I edit directly on GitHub.
+//You think that's bad?
+//IT CAN'T USE GIT
+//So...
+//Help.
+
+//Sincerely, 2017 Me
 void andrews_class::run(CustomAdven & adv)
 {
 
