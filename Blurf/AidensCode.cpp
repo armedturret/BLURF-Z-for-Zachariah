@@ -104,6 +104,12 @@ void AidensCode::run(CustomAdven & adv)
 	adv.setupChoice("use lever", "continue2");
 	adv.addPath(__LINE__, "continue1", R"(  It took quite a while but you finally reached the base of the mountain, at the top, there was a single door with a lever flat against the door.)");
 
-	adv.setupChoice("filler", "end");
-	adv.addPath(__LINE__, "continue2", R"(   You pull the lever to one side and the door comes loose, its big enough to bring the wagon in. Inside is a large room and some tables lining the walls in the back there was another door, behind it is the living quarters on one of the beds there was a rotting corpse, it must have been Edward. that was the best place for him. In here there was a shower, you can finally wash and take the suit off after a month. You sleep here, you’ll get what you need in the morning.)");
+	adv.setupChoice("c", "continue3");
+	adv.addPath(__LINE__, "continue2", R"(   You pull the lever to one side and the door comes loose, its big enough to bring the wagon in. Inside is a large room and some tables lining the walls in the back there was another door, behind it is the living quarters on one of the beds there was a rotting corpse, it must have been Edward. that was the best place for him. In here there was a shower, you can finally wash and take the suit off after a month. You sleep here, you’ll get what you need in the morning. Typec to continue.)");
+
+	adv.setupChoice("save", "end");
+	adv.setupChoice("suit", "end");
+	adv.addPath(__LINE__, "continue3", R"(   In the main room there are green strips like the suit, you could make another suit. There is also radiation medicine you could either save, or suit.)");
+
+
 }
