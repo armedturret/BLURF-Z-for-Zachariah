@@ -59,13 +59,13 @@ void andrews_class::run(CustomAdven & adv)
 	adv.setupChoice("yes", "goinmorning");
 	adv.setupChoice("no", "nogo");
 	adv.addPath(__LINE__, "yesgo", "\"Then it\'s decided. You\'ll head out tomorrow morning, pick up anything you can, and head back. A simple, routine mission. Ok?\"");
-	
+
 	adv.setupChoice("", "ogden");
 	adv.addPath(__LINE__, "goinmorning", "In the morning, you creep out the door, get the wagon and suit, and leave the valley. You head north, to Ogdentown.\n--PRESS ENTER TO CONTINUE--");
-	
+
 	adv.setupChoice("", "ogdentown");
 	adv.addPath(__LINE__, "ogden", "* - OGDENTOWN - *");
-		    
+
 	adv.setupChoice("north", "square");
 	adv.setupChoice("east", "grave");
 	adv.addPath(__LINE__, "ogdentown", "You enter quietly. The gate creaks as you open it. Everything is still. To the north is the town square. East is the churchyard.");
@@ -74,7 +74,7 @@ void andrews_class::run(CustomAdven & adv)
 	adv.setupChoice("west", "ogdentown");
 	adv.addPath(__LINE__, "grave", "These were the lucky ones. They didn't have to go through what the others did. They never even knew this would happen. West is the entrance. North is the church.");
 
-	adv.setupChoice("south","grave");
+	adv.setupChoice("south", "grave");
 	adv.addPath(__LINE__, "church", "The church. You pause a moment to remember those who died here, before and after the war. South is the churchyard.");
 
 	adv.setupChoice("enter shops", "shops");
@@ -84,7 +84,7 @@ void andrews_class::run(CustomAdven & adv)
 	adv.setupChoice("examine fountain", "fountain");
 	adv.setupChoice("fountain", "fountain");
 	adv.addPath(__LINE__, "square", "You head north to the town square. Many shops line the walls. In the center is a large fountain.");
-	
+
 	adv.setupChoice("enter shops", "shops");
 	adv.setupChoice("go to shops", "shops");
 	adv.setupChoice("shops", "shops");
@@ -96,32 +96,29 @@ void andrews_class::run(CustomAdven & adv)
 
 	adv.setupChoice("leave", "leaving");
 	adv.addPath(__LINE__, "shops", "You walk into one of the shops. Inside are all the supplies you need. You grab them, and make ready to leave.");
-	
+
 	adv.setupChoice("build fire", "fire");
 	adv.setupChoice("build a fire", "fire");
 	adv.setupChoice("fire", "fire");
 	adv.setupChoice("sleep", "sleep");
 	adv.setupChoice("continue", "walkonplz");
 	adv.addPath(__LINE__, "leaving", "You head out of the town. Outside, you begin heading south. However, as you walk, you realize it's been too long. You should have been home by now... the sun is setting. You walk on until you reach a cave in a mountainside. Settling down, you decide what to do. Build a fire, sleep, or continue on?");
-	
-	adv.setupChoice("end","finale");
-	adv.addPath(__LINE__, "walkonplz", "You decide to continue on. You head west, thinking you might be able to correct your mistake. however, as you keep going, you find yourself hopelessly lost. You keep going, and find- yes! The entrance to the valley! You enter, relieved... but something's different. This isn't your valley at all! A fw people come out, wary. \"Who are you?\", they ask. you tell them.\n\nWithing a few days, you have gotten to know these people well. This must be the valley with the birds! You settle down, hoping John is safe. This is, your home. All that's left to do now is say \"The-\" 
-	
-	adv.setupChoice("east", "homeagain");
-	adv.addPath(__LINE__, "fire", "You make a small fire with som of the supplies, then fall asleep. Upon waking up, light shows you your mistake. Last night, you must have turned to avoid the thicker forest, and not gotten back on track. To reach the alley, all you have to do is go east a few miles, and you're home!");
-	
+
 	adv.setupChoice("end", "finale");
-	adv.addPath(__LINE__, "homeagain", "You enter the valley with the supplies. John greets you. With the supplies, you can start again. The valley will be humanity's ark. All that's left to do now is say \"The-\"");	    
-		    
+	adv.addPath(__LINE__, "walkonplz", "You decide to continue on. You head west, thinking you might be able to correct your mistake. however, as you keep going, you find yourself hopelessly lost. You keep going, and find- yes! The entrance to the valley! You enter, relieved... but something's different. This isn't your valley at all! A fw people come out, wary. \"Who are you?\", they ask. you tell them.\n\nWithing a few days, you have gotten to know these people well. This must be the valley with the birds! You settle down, hoping John is safe. This is, your home. All that's left to do now is say \"The-\" ");
+
+		adv.setupChoice("east", "homeagain");
+	adv.addPath(__LINE__, "fire", "You make a small fire with som of the supplies, then fall asleep. Upon waking up, light shows you your mistake. Last night, you must have turned to avoid the thicker forest, and not gotten back on track. To reach the alley, all you have to do is go east a few miles, and you're home!");
+
+	adv.setupChoice("end", "finale");
+	adv.addPath(__LINE__, "homeagain", "You enter the valley with the supplies. John greets you. With the supplies, you can start again. The valley will be humanity's ark. All that's left to do now is say \"The-\"");
+
 	adv.setupChoice("", "end");
 	adv.addPath(__LINE__, "finale", "* - THE END - *\n\nThis has been SOUTH, written by Andrew Winters. Feel free to play again if you wish.");
 }
-
 andrews_class::andrews_class()
 {
 }
-
-
 andrews_class::~andrews_class()
 {
 }
