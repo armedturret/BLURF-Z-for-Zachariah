@@ -107,9 +107,13 @@ void AidensCode::run(CustomAdven & adv)
 	adv.setupChoice("c", "continue3");
 	adv.addPath(__LINE__, "continue2", R"(   You pull the lever to one side and the door comes loose, its big enough to bring the wagon in. Inside is a large room and some tables lining the walls in the back there was another door, behind it is the living quarters on one of the beds there was a rotting corpse, it must have been Edward. that was the best place for him. In here there was a shower, you can finally wash and take the suit off after a month. You sleep here, you’ll get what you need in the morning. Typec to continue.)");
 
-	adv.setupChoice("save", "end");
-	adv.setupChoice("suit", "end");
+	adv.setupChoice("save", "savedie");
+	adv.setupChoice("suit", "suitdie");
 	adv.addPath(__LINE__, "continue3", R"(   In the main room there are green strips like the suit, you could make another suit. There is also radiation medicine you could either save, or suit.)");
 
+	adv.setupChoice("quit", "end");
+	adv.addPath(__LINE__, "savedie", R"(   You take the medicine and put in the waggon you drag the wagon behind you as you go down the wagon, the wagon rolls faster than you walk and you trip fall break both legs left arm and the wagon rolls over your head. Type quit to exit.)");
 
+	adv.setupChoice("quit", "end");
+	adv.addPath(__LINE__, "suitdie", R"(  After several days you finish making the suit you put in the waggon you drag the wagon behind you as you go down the wagon, the wagon rolls faster than you walk and you trip fall break both legs left arm and the wagon rolls over your head. Type quit to exit.)");
 }
