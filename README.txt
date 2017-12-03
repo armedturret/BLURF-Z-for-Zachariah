@@ -22,3 +22,4 @@ Credits.txt: The credits for the project.
 Tips:
 Don't make ambiguous actions i.e. say "jump over bar" rather than "jump over"
 Say "cancel" to stop examining something i.e. if you say "open door" but it says you don't have a key say "cancel"
+All actions must include a verb i.e. "go north" instead of "north"
